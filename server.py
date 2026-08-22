@@ -17,13 +17,12 @@ from pathlib import Path
 from typing import Any
 
 SCRIPT_DIR = Path(__file__).resolve().parent
-DB_PATH = SCRIPT_DIR / "cars.db"
+import config as _config
+DB_PATH = _config.DB_PATH
 
-FUEL_MAP = {3: "Benzin", 4: "Diesel", 5: "Hybrid", 13: "Plug-in", 9: "Ethanol", 11: "Erdgas", 14: "Wasserstoff"}
-TRANS_MAP = {1: "Manuell", 2: "Automatik", 3: "Halbautomatik"}
-BODY_MAP  = {1: "Limousine", 3: "Kombi", 4: "Coupé", 5: "Cabrio",
-             6: "Kombi", 9: "SUV", 13: "Van", 14: "Pickup", 15: "Transporter",
-             19: "Sportwagen", 25: "Crossover", 26: "Offroader", 43: "Sonderaufbau", 100: "Sonstige"}
+FUEL_MAP = _config.FUEL_MAP
+TRANS_MAP = _config.TRANSMISSION_MAP
+BODY_MAP  = _config.BODY_MAP
 
 
 def get_cars(include_inactive: bool = False) -> list[dict]:
@@ -129,7 +128,7 @@ HTML = r"""<!DOCTYPE html>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
-<title>Skoda &lt;30k — Berlin</title>
+<title>E-Fahrzeuge &lt;31k — Berlin</title>
 <style>
 :root {
   --bg: #f5f5f7; --card: #fff; --text: #1d1d1f; --text2: #6e6e73;
@@ -725,11 +724,11 @@ def main():
     args = parser.parse_args()
 
     if not DB_PATH.exists():
-        print(f"ERROR: Database not found at {DB_PATH}. Run car_tracker.py first.")
+        print(f"ERROR: Database not found at {DB_PATH}. Run tracker.py first.")
         exit(1)
 
     server = HTTPServer((args.host, args.port), Handler)
-    print(f"🚗 Skoda Browser — http://{args.host}:{args.port}")
+    print(f"🚗 E-Fahrzeuge Browser — http://{args.host}:{args.port}")
     print(f"   Press Ctrl+C to stop.")
     try:
         server.serve_forever()

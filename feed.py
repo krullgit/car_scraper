@@ -1,16 +1,12 @@
 #!/usr/bin/env python3
-"""Build the public cars.json feed for the VW Automobile Berlin scraper.
+"""Build the public cars.json feed (+ status.json) for the LLM scheduler.
 
 This module only collects raw data — it does NOT normalize or semantically
-interpret equipment. ChatGPT will analyze the raw_text later.
+interpret equipment. The downstream LLM agent evaluates raw_full_text itself.
 
-per-vehicle schema:
-    id, title, price_eur, first_registration, mileage_km, location, dealer,
-    url, first_seen, last_seen, raw_text, (optional price_history)
-
-Values like acc/heated_seats/heat_pump are deliberately NOT produced here.
-If a value is already structured in the API (price, km, EZ, owners, ...),
-it is copied as-is; otherwise it stays inside raw_text only.
+Per-vehicle fields follow the agreed public schema:
+    vehicleid, title, price_eur, kilometers, registrationdate, power_kw, url,
+    dealer_name, raw_full_text  (+ additional structured API fields)
 
 Usage:
     python3 feed.py                # write cars.json next to this script
@@ -25,42 +21,7 @@ from datetime import datetime
 from pathlib import Path
 from typing import Any
 
-SCRIPT_DIR = Path(__file__).resolve().parent
-DB_PATH = Path(__file__).resolve().parent / "cars.db"
-SOURCE = "volkswagen-automobile-berlin"
-BASE_URL = "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche"
-
-# Structured dealer-name fallback for well-known dealer IDs (used only when the
-# detail-page scrape has not yet stored a dealer_name).
-DEALER_NAMES = {
-    545: "Skoda Automobile Berlin Spandau",
-    546: "Skoda Automobile Berlin Charlottenburg",
-    558: "Skoda Automobile Berlin Tempelhof",
-    21824: "Skoda Automobile Berlin Zehlendorf",
-    22617: "Skoda Automobile Potsdam",
-    22631: "Skoda Automobile Berlin Marzahn",
-    22673: "Audi Berlin",
-    22676: "Audi Berlin",
-    25894: "VGRB Berlin Weißensee",
-}
-
-DEALER_CITY = {
-    545: "Berlin", 546: "Berlin", 558: "Berlin", 21824: "Berlin",
-    22617: "Potsdam", 22631: "Berlin", 22673: "Berlin", 22676: "Berlin",
-    25894: "Berlin",
-}
-
-FUEL_MAP = {
-    3: "Benzin", 4: "Diesel", 5: "Hybrid", 13: "Plug-in",
-    9: "Ethanol", 11: "Erdgas", 14: "Wasserstoff",
-}
-TRANSMISSION_MAP = {1: "Manuell", 2: "Automatik", 3: "Halbautomatik"}
-BODY_MAP = {
-    1: "Limousine", 3: "Kombi", 4: "Coupé", 5: "Cabrio",
-    6: "Kombi", 9: "SUV", 13: "Van", 14: "Pickup",
-    15: "Transporter", 19: "Sportwagen", 25: "Crossover",
-    26: "Offroader", 43: "Sonderaufbau", 100: "Sonstige",
-}
+import config
 
 
 def _now_iso() -> str:
@@ -76,7 +37,7 @@ def _iso_ts(value: str) -> str:
     except ValueError:
         return value
     if dt.tzinfo is None:
-        dt = dt.replace(tzinfo=__import__("datetime").timezone.utc)
+        dt = dt.replace(tzinfo=datetime.now().astimezone().tzinfo)
     return dt.isoformat(timespec="seconds")
 
 
@@ -114,8 +75,8 @@ def build_vehicles(conn: sqlite3.Connection) -> list[dict]:
                 (vid,),
             ).fetchall()
 
-            dealer_name = (r["dealer_name"] or "").strip() or DEALER_NAMES.get(r["dealerid"], "")
-            city = _city_from_address(r["dealer_address"] or "") or DEALER_CITY.get(r["dealerid"], "")
+            dealer_name = (r["dealer_name"] or "").strip() or config.DEALER_NAMES.get(r["dealerid"], "")
+            city = _city_from_address(r["dealer_address"] or "") or config.DEALER_CITY.get(r["dealerid"], "")
             reg = (r["registrationdate"] or "")[:7]
 
             vehicle: dict[str, Any] = {
@@ -125,7 +86,7 @@ def build_vehicles(conn: sqlite3.Connection) -> list[dict]:
                 "kilometers": r["kilometers"],
                 "registrationdate": reg or None,
                 "power_kw": r["power"],
-                "url": f"{BASE_URL}/{vid}",
+                "url": f"{config.BASE_URL}/{vid}",
                 "dealer_name": dealer_name or None,
             }
             # Easy structured values that the API already provides (no text
@@ -136,9 +97,9 @@ def build_vehicles(conn: sqlite3.Connection) -> list[dict]:
                 "model": r["model"],
                 "dealer_id": r["dealerid"],
                 "local_code": r.get("localcode"),
-                "fuel": FUEL_MAP.get(r["fuel"]),
-                "transmission": TRANSMISSION_MAP.get(r["transmission"]),
-                "body": BODY_MAP.get(r["body"]),
+                "fuel": config.FUEL_MAP.get(r["fuel"]),
+                "transmission": config.TRANSMISSION_MAP.get(r["transmission"]),
+                "body": config.BODY_MAP.get(r["body"]),
                 "num_owners": r["numowners"],
                 "co2_gkm": r["emissionco2"] if r["emissionco2"] else None,
                 "battery_range_km": r["batteryrange"] if r["batteryrange"] else None,
@@ -157,17 +118,13 @@ def build_vehicles(conn: sqlite3.Connection) -> list[dict]:
                     if h["customerprice"] is not None
                 ]
 
-            raw_text = (r["raw_text"] or "").strip()
-            vehicle["raw_text"] = raw_text
-
-            # Unmodified document.body.innerText of the detail page — kept as-is
-            # including menu/footer noise. Never filtered, never interpreted.
-            raw_full_text = r["raw_full_text"] or ""
-            vehicle["raw_full_text"] = raw_full_text
+            vehicle["raw_text"] = (r["raw_text"] or "").strip()
+            # Unmodified document.body.innerText — kept as-is, never filtered.
+            vehicle["raw_full_text"] = r["raw_full_text"] or ""
 
             vehicles.append(vehicle)
         except Exception as e:
-            print(f"  WARN: skipping vehicle {r.get('vehicleid')}: {e}", file=__import__("sys").stderr)
+            print(f"  WARN: skipping vehicle {row.get('vehicleid')}: {e}", file=__import__("sys").stderr)
     return vehicles
 
 
@@ -175,7 +132,7 @@ def build_feed(conn: sqlite3.Connection) -> dict:
     vehicles = build_vehicles(conn)
     return {
         "generated_at": _now_iso(),
-        "source": SOURCE,
+        "source": config.SOURCE,
         "vehicle_count": len(vehicles),
         "vehicles": vehicles,
     }
@@ -198,17 +155,13 @@ def write_json(data: dict, out_path: Path) -> None:
     tmp.replace(out_path)
 
 
-def write_feed(feed: dict, out_path: Path) -> None:
-    write_json(feed, out_path)
-
-
 def main() -> None:
     parser = argparse.ArgumentParser(description="Build cars.json feed")
-    parser.add_argument("--out", type=str, default=str(SCRIPT_DIR / "cars.json"),
+    parser.add_argument("--out", type=str, default=str(config.FEED_FILE),
                         help="Output path for the feed file")
     args = parser.parse_args()
 
-    conn = sqlite3.connect(str(DB_PATH))
+    conn = sqlite3.connect(str(config.DB_PATH))
     try:
         feed = build_feed(conn)
     finally:
@@ -216,9 +169,8 @@ def main() -> None:
 
     out = Path(args.out)
     out.parent.mkdir(parents=True, exist_ok=True)
-    write_feed(feed, out)
-    n = len(feed["vehicles"])
-    print(f"Feed written: {out} ({n} vehicles)")
+    write_json(feed, out)
+    print(f"Feed written: {out} ({len(feed['vehicles'])} vehicles)")
 
 
 if __name__ == "__main__":

@@ -4,11 +4,12 @@
 import asyncio
 import re
 import sqlite3
-from pathlib import Path
 
 from playwright.async_api import async_playwright
 
-DB_PATH = Path(__file__).resolve().parent / "cars.db"
+import config
+
+DB_PATH = config.DB_PATH
 
 FEATURE_PATTERNS = {
     "ACC": re.compile(r"(?:Automatische\s+Distanzregelung|Adaptive\s+Cruise)",
