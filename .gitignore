@@ -1,0 +1,16 @@
+# Secrets — never commit this file
+secrets.json
+
+# Lokale Cache/DB — nie pushen
+.feed_cache/
+*.db
+*.db-shm
+*.db-wal
+__pycache__/
+*.pyc
+
+# Logs & generierte Ausgaben
+*.log
+cars_legacy.json
+cars.json
+status.json
