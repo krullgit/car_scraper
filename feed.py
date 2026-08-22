@@ -48,6 +48,7 @@ def build_vehicles(conn: sqlite3.Connection) -> list[dict]:
     conn.row_factory = sqlite3.Row
     rows = conn.execute("""
         SELECT c.*, e.raw_full_text as stored_raw_full_text,
+               e.image_analysis_json as stored_image_analysis,
                e.scraped_at as equip_scraped_at
         FROM cars c
         LEFT JOIN car_equipment e ON c.vehicleid = e.vehicleid
@@ -81,6 +82,17 @@ def build_vehicles(conn: sqlite3.Connection) -> list[dict]:
                 "raw_full_text": r["stored_raw_full_text"] or "",
                 "source_fields": source_fields,
             }
+
+            # Vision analysis results, separated from the source data.
+            ia_raw = (r.get("stored_image_analysis") or "").strip()
+            if ia_raw:
+                try:
+                    vehicle["image_analysis"] = json.loads(ia_raw).get("image_analysis",
+                                        {"battery_certificates": []})
+                except (json.JSONDecodeError, TypeError):
+                    vehicle["image_analysis"] = {"battery_certificates": []}
+            else:
+                vehicle["image_analysis"] = {"battery_certificates": []}
 
             # Transport-only records (not interpretations): scrape bookkeeping.
             vehicle["first_seen"] = _iso_ts(r["first_seen"])

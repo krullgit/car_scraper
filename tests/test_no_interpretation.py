@@ -171,6 +171,7 @@ def db_schema() -> str:
     CREATE TABLE IF NOT EXISTS car_equipment (
         vehicleid       INTEGER PRIMARY KEY,
         raw_full_text   TEXT,
+        image_analysis_json TEXT,
         scraped_at      TEXT
     );
     CREATE TABLE IF NOT EXISTS price_history (
