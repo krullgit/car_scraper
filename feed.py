@@ -1,12 +1,15 @@
 #!/usr/bin/env python3
 """Build the public cars.json feed (+ status.json) for the LLM scheduler.
 
-This module only collects raw data — it does NOT normalize or semantically
-interpret equipment. The downstream LLM agent evaluates raw_full_text itself.
+This module only transports raw source data — it does NOT normalize or
+semantically interpret anything. The downstream LLM agent is the only part
+that judges equipment, location, features, etc.
 
-Per-vehicle fields follow the agreed public schema:
-    vehicleid, title, price_eur, kilometers, registrationdate, power_kw, url,
-    dealer_name, raw_full_text  (+ additional structured API fields)
+Per-vehicle core schema:
+    id, url, scraped_at, source, raw_full_text, source_fields
+
+`source_fields` is the unmodified original API JSON (1:1 from the source).
+No location derivation, no feature heuristics, no dealer-name normalization.
 
 Usage:
     python3 feed.py                # write cars.json next to this script
@@ -15,7 +18,6 @@ Usage:
 
 import argparse
 import json
-import re
 import sqlite3
 from datetime import datetime
 from pathlib import Path
@@ -41,23 +43,12 @@ def _iso_ts(value: str) -> str:
     return dt.isoformat(timespec="seconds")
 
 
-def _city_from_address(address: str) -> str:
-    """Extract the city from a 'street · 12345 City' address string."""
-    if not address:
-        return ""
-    m = re.search(r"(\d{5})\s+([A-Za-zäöüÄÖÜß\- ]+)$", address.strip())
-    if m:
-        return m.group(2).strip()
-    return ""
-
-
 def build_vehicles(conn: sqlite3.Connection) -> list[dict]:
     """Build the vehicle list. One broken vehicle must never break the export."""
     conn.row_factory = sqlite3.Row
     rows = conn.execute("""
-        SELECT c.*, e.raw_text as raw_text, e.raw_full_text as raw_full_text,
-               e.dealer_name as dealer_name, e.dealer_address as dealer_address,
-               e.scraped_at as scraped_at
+        SELECT c.*, e.raw_full_text as stored_raw_full_text,
+               e.scraped_at as equip_scraped_at
         FROM cars c
         LEFT JOIN car_equipment e ON c.vehicleid = e.vehicleid
         WHERE c.is_active = 1
@@ -69,58 +60,44 @@ def build_vehicles(conn: sqlite3.Connection) -> list[dict]:
         try:
             r = dict(row)
             vid = int(r["vehicleid"])
+
+            # source_fields: the original API response, untouched.
+            source_fields = {}
+            api_json = (r.get("api_json") or "").strip()
+            if api_json:
+                try:
+                    parsed = json.loads(api_json)
+                    if isinstance(parsed, dict):
+                        source_fields = parsed
+                except (json.JSONDecodeError, TypeError):
+                    source_fields = {}
+
+            vehicle: dict[str, Any] = {
+                "id": str(vid),
+                "url": f"{config.BASE_URL}/{vid}",
+                "scraped_at": _iso_ts(r["equip_scraped_at"]) if r["equip_scraped_at"] else _now_iso(),
+                "source": config.SOURCE,
+                # Unmodified document.body.innerText — kept as-is, never filtered.
+                "raw_full_text": r["stored_raw_full_text"] or "",
+                "source_fields": source_fields,
+            }
+
+            # Transport-only records (not interpretations): scrape bookkeeping.
+            vehicle["first_seen"] = _iso_ts(r["first_seen"])
+            vehicle["last_seen"] = _iso_ts(r["last_seen"])
+
             history = conn.execute(
                 "SELECT recorded_at, customerprice FROM price_history "
                 "WHERE vehicleid=? ORDER BY recorded_at DESC",
                 (vid,),
             ).fetchall()
-
-            dealer_name = (r["dealer_name"] or "").strip() or config.DEALER_NAMES.get(r["dealerid"], "")
-            city = _city_from_address(r["dealer_address"] or "") or config.DEALER_CITY.get(r["dealerid"], "")
-            reg = (r["registrationdate"] or "")[:7]
-
-            vehicle: dict[str, Any] = {
-                "vehicleid": str(vid),
-                "title": r["shortdescription"] or "",
-                "price_eur": round(float(r["customerprice"] or 0)),
-                "kilometers": r["kilometers"],
-                "registrationdate": reg or None,
-                "power_kw": r["power"],
-                "url": f"{config.BASE_URL}/{vid}",
-                "dealer_name": dealer_name or None,
-            }
-            # Easy structured values that the API already provides (no text
-            # interpretation required). None-values are dropped.
-            extra = {
-                "id": str(vid),
-                "make": r["make"],
-                "model": r["model"],
-                "dealer_id": r["dealerid"],
-                "local_code": r.get("localcode"),
-                "fuel": config.FUEL_MAP.get(r["fuel"]),
-                "transmission": config.TRANSMISSION_MAP.get(r["transmission"]),
-                "body": config.BODY_MAP.get(r["body"]),
-                "num_owners": r["numowners"],
-                "co2_gkm": r["emissionco2"] if r["emissionco2"] else None,
-                "battery_range_km": r["batteryrange"] if r["batteryrange"] else None,
-                "num_images": r["numimages"],
-                "location": city or None,
-                "first_seen": _iso_ts(r["first_seen"]),
-                "last_seen": _iso_ts(r["last_seen"]),
-                "scraped_at": _iso_ts(r["scraped_at"]) if r["scraped_at"] else None,
-            }
-            vehicle.update({k: v for k, v in extra.items() if v not in (None, 0)})
-
             if history:
                 vehicle["price_history"] = [
-                    {"recorded_at": _iso_ts(h["recorded_at"]), "price_eur": round(float(h["customerprice"] or 0))}
+                    {"recorded_at": _iso_ts(h["recorded_at"]),
+                     "price_eur": round(float(h["customerprice"] or 0))}
                     for h in history
                     if h["customerprice"] is not None
                 ]
-
-            vehicle["raw_text"] = (r["raw_text"] or "").strip()
-            # Unmodified document.body.innerText — kept as-is, never filtered.
-            vehicle["raw_full_text"] = r["raw_full_text"] or ""
 
             vehicles.append(vehicle)
         except Exception as e:

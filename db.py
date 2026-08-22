@@ -43,6 +43,7 @@ CREATE TABLE IF NOT EXISTS cars (
     financing       TEXT,
     leasingbusiness TEXT,
     leasingprivate  TEXT,
+    api_json        TEXT,
     first_seen      TEXT NOT NULL DEFAULT (datetime('now')),
     last_seen       TEXT NOT NULL DEFAULT (datetime('now')),
     is_active       INTEGER NOT NULL DEFAULT 1
@@ -85,6 +86,12 @@ def get_db() -> sqlite3.Connection:
     conn.execute("PRAGMA journal_mode=WAL")
     conn.execute("PRAGMA foreign_keys=ON")
     conn.executescript(SCHEMA)
+    # Migration for existing databases that predate api_json.
+    try:
+        conn.execute("ALTER TABLE cars ADD COLUMN api_json TEXT")
+        conn.commit()
+    except sqlite3.OperationalError:
+        pass
     return conn
 
 
@@ -105,7 +112,7 @@ CAR_COLUMNS = [
     "numowners", "emissionco2", "emissionsbadge", "emissionsgroup",
     "batteryrange", "dealerid", "offertypecode", "category",
     "numimages", "images", "envkv", "financing", "leasingbusiness",
-    "leasingprivate",
+    "leasingprivate", "api_json",
 ]
 
 CAR_COLUMNS_STR = ", ".join(CAR_COLUMNS)
@@ -164,6 +171,7 @@ def car_to_row(car: dict) -> dict[str, Any]:
         "financing": financing_json,
         "leasingbusiness": lb_json,
         "leasingprivate": lp_json,
+        "api_json": json.dumps(car, ensure_ascii=False, default=_ser),
     }
 
 

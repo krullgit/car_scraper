@@ -45,14 +45,12 @@ def notify_new_cars(conn, new_ids: set[int]) -> None:
         list(to_notify),
     ).fetchall()
 
-    dealer_names = {546: "Charlottenburg", 25894: "Weißensee", 558: "Tempelhof",
-                    22617: "Potsdam", 545: "Spandau"}
-
     for r in rows:
         price = f"{r['customerprice']:,.0f}€".replace(",", ".")
         km = f"{r['kilometers']:,d}".replace(",", ".")
         reg = (r["registrationdate"] or "")[:7]
-        dname = dealer_names.get(r["dealerid"], f"Dealer {r['dealerid']}")
+        # No dealer-name / location interpretation — only the raw dealer id.
+        dname = f"Dealer {r['dealerid']}"
         vid = r["vehicleid"]
         url = f"{config.BASE_URL}/{vid}"
         msg = (
