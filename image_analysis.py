@@ -23,6 +23,7 @@ from typing import Any, Optional
 import requests
 
 import certificate
+import config
 import vision
 
 
@@ -51,20 +52,109 @@ def _fetch(url: str, timeout: int = 25) -> bytes:
     return resp.content
 
 
+def looksha256(image_bytes: bytes) -> str:
+    """Scale-normalized hash of the top header band.
+
+    Verified empirically: real AVILOO certificates have a nearly identical top
+    band. We normalize size first (max width ~160, keep aspect) and take the
+    top ~28% as the 'header' so a thumbnail and the full-size image hash the
+    same — this lets the template learned from a full cert match its thumbnail.
+    """
+    import hashlib
+    try:
+        from PIL import Image
+        img = Image.open(io.BytesIO(image_bytes)).convert("L")
+        w, h = img.size
+        scale = 160.0 / w
+        img = img.resize((160, max(1, int(h * scale))))
+        header_h = max(1, int(img.size[1] * 0.28))
+        header = img.crop((0, 0, img.size[0], header_h)).resize((32, 16))
+        return hashlib.sha1(header.tobytes()).hexdigest()
+    except Exception:
+        return ""
+
+
+# Registered header hashes of confirmed battery certificates. They are learned
+# at runtime (see load_certificate_templates) and persisted across runs.
+_HEADER_TEMPLATES: set = set()
+_TEMPLATES_LOADED = False
+
+
+def load_certificate_templates(db_path) -> None:
+    """Load the top-band header hashes of previously confirmed certificates
+    from the database so the header pre-filter is effective from the start.
+    Runs at most once per process."""
+    global _TEMPLATES_LOADED
+    if _TEMPLATES_LOADED:
+        return
+    _TEMPLATES_LOADED = True
+    import sqlite3
+    try:
+        conn = sqlite3.connect(str(db_path))
+        conn.row_factory = sqlite3.Row
+        rows = conn.execute(
+            "SELECT c.images, e.image_analysis_json "
+            "FROM car_equipment e JOIN cars c ON c.vehicleid=e.vehicleid "
+            "WHERE e.image_analysis_json LIKE '%certificate_provider%'"
+        ).fetchall()
+        conn.close()
+    except Exception:
+        return
+    # Learn header templates from the xs thumbnail of every confirmed
+    # certificate, because stage-1 classifies thumbnails. Thumb and full image
+    # are cropped differently, so the template must match what stage-1 sees.
+    # Loading all known variants keeps header recall high without any fallback.
+    for row in rows:
+        try:
+            certs = json.loads(row["image_analysis_json"])["image_analysis"]["battery_certificates"]
+            images = json.loads(row["images"]) if row["images"] else []
+        except (json.JSONDecodeError, TypeError):
+            continue
+        for cert in certs:
+            idx = cert.get("source_image_index")
+            if idx is None or idx >= len(images):
+                continue
+            obj = images[idx]
+            thumb_url = obj.get("xs") or obj.get("s") if isinstance(obj, dict) else None
+            if not thumb_url:
+                continue
+            try:
+                register_header_template(_fetch(thumb_url, timeout=20))
+            except Exception:
+                continue
+    if _HEADER_TEMPLATES:
+        print(f"  Header-Templates geladen: {len(_HEADER_TEMPLATES)}", flush=True)
+
+
+def register_header_template(image_bytes: bytes) -> None:
+    """Register the top-band hash of a confirmed certificate as a template."""
+    h = looksha256(image_bytes)
+    if h:
+        _HEADER_TEMPLATES.add(h)
+
+
+def has_certificate_header(image_bytes: bytes) -> bool:
+    """True when the image's top band matches a known certificate template."""
+    if not _HEADER_TEMPLATES:
+        return True  # no templates yet -> fall back to generic document filter
+    return looksha256(image_bytes) in _HEADER_TEMPLATES
+
+
 def looks_like_document(image_bytes: bytes) -> bool:
     """Cheap, PRE-OCR heuristic to reject obvious car photos.
 
     A battery certificate / document is typically a bright-ish image with high
-    text density: many local intensity changes (edges), relatively uniform
-    background and fairly small size compared to a photo. We only use this as a
-    pre-filter that avoids scanning photos with OCR — actual certificate
-    detection still happens via the vision/OCR backend afterwards.
+    text density. AVILOO certificates are consistently 800x600 (~600 KB JPEG is
+    roughly 150-210 KB) with a bright canvas and many thin edges. We use this
+    as a hard pre-filter: only images that plausibly match a document signature
+    reach the OCR stage. Actual certificate detection still happens via OCR.
 
     Returns True when the image plausibly contains dense text (document-like),
-    False for likely photos. This is a pure image-statistics filter; it never
-    extracts or interprets any value."""
+    False for likely photos. Pure image-statistics — it never extracts or
+    interprets any value."""
     try:
-        from PIL import Image, ImageFilter, ImageOps
+        import struct
+        from PIL import Image, ImageFilter
         img = Image.open(io.BytesIO(image_bytes)).convert("L")
     except Exception:
         return True  # can't tell -> let OCR decide
@@ -73,35 +163,32 @@ def looks_like_document(image_bytes: bytes) -> bool:
     if w < 20 or h < 20:
         return False
 
-    # Downscale large images to keep the statistics cheap (~160px wide).
+    # AVILOO certificates are 800x600. Favor document-like aspect ratios
+    # (roughly A4/4:3/portrait with dense text), reject ultra-wide photos.
+    ratio = w / h
+    if ratio > 2.2 or ratio < 0.45:
+        return False
+
+    # Image byte size as a weak signal: a text-heavy JPEG is larger than a
+    # flat photo and smaller than a very high-res photo.
+    size_kb = len(image_bytes) / 1024
+    if size_kb < 8:
+        return True  # tiny thumbnail — can't infer; let OCR decide
+
+    # Bright canvas + edge density (same as before).
     scale = min(1.0, 200.0 / max(w, h))
     if scale < 1.0:
         img = img.resize((max(1, int(w * scale)), max(1, int(h * scale))))
-
-    # Brightness: certificates are usually light documents with dark text.
-    stats = img.getbbox()  # not used; keep simple
     histogram = img.histogram()
     total = sum(histogram)
-    light_pixels = sum(histogram[180:256])
-    dark_pixels = sum(histogram[0:60])
-    light_ratio = light_pixels / total if total else 0
-    dark_ratio = dark_pixels / total if total else 0
-
-    # Edge density: text creates many thin high-contrast edges.
+    light_ratio = sum(histogram[180:256]) / total if total else 0
     edges = img.filter(ImageFilter.FIND_EDGES)
     edge_hist = edges.histogram()
     edge_total = sum(edge_hist)
-    strong_edges = sum(edge_hist[40:256])
-    edge_ratio = strong_edges / edge_total if edge_total else 0
+    edge_ratio = sum(edge_hist[40:256]) / edge_total if edge_total else 0
 
-    # A photo usually has large smooth areas; a document has spare white space
-    # between tightly packed text lines. A battery certificate is virtually
-    # always a light document: bright canvas (>25%) with a fair amount of thin
-    # high-contrast edges (>6%). We keep images that plausibly contain text and
-    # reject dark smooth photos — this roughly halves the OCR load.
     if light_ratio > 0.25 and edge_ratio > 0.06:
         return True
-    # Exception: extremely edge-heavy images (dense screenshots/documents).
     if edge_ratio > 0.30:
         return True
     return False
@@ -174,30 +261,54 @@ def analyze_vehicle_images(
         if spec.url:
             src[spec.xs or spec.s or spec.url] = spec
 
+    # Pre-load known certificate header templates (learned in earlier runs).
+    load_certificate_templates(config.DB_PATH)
+
     candidates = []
     urls = list(src)
-    if urls:
-        # fork is the Linux default and does not re-import the main module
-        # (avoiding the "No such file: <stdin>" spawn problem).
+
+    def _ocr_urls(url_batch):
+        """OCR a batch of thumbnails in parallel; returns candidate (spec, lines)."""
+        found = []
+        if not url_batch:
+            return found
         try:
             mp_ctx = mp.get_context("fork")
         except ValueError:
             mp_ctx = mp.get_context("spawn")
-        with mp_ctx.Pool(processes=min(workers, len(urls))) as pool:
-            for spec_url, lines in zip(urls, pool.imap_unordered(_stage1_worker, urls, chunksize=1)):
-                if isinstance(lines, str):
-                    report.errors.append(f"image {spec_url[:60]}: {lines}")
-                    continue
-                if lines is None:
-                    continue  # rejected by the cheap document pre-filter
-                spec = src[spec_url]
-                report.scanned_count += 1
-                classification = certificate.classify_image_text([l for l, _ in lines])
-                if classification == "battery_certificate":
-                    candidates.append((spec, lines))
-                    if stop_at_first:
-                        pool.terminate()
-                        break
+        with mp_ctx.Pool(processes=min(workers, len(url_batch))) as pool:
+            try:
+                for spec_url, lines in zip(url_batch, pool.imap_unordered(_stage1_worker, url_batch, chunksize=1)):
+                    if isinstance(lines, str):
+                        report.errors.append(f"image {spec_url[:60]}: {lines}")
+                        continue
+                    if lines is None:
+                        continue  # rejected by the cheap document pre-filter
+                    spec = src[spec_url]
+                    report.scanned_count += 1
+                    classification = certificate.classify_image_text([l for l, _ in lines])
+                    if classification == "battery_certificate":
+                        found.append((spec, lines))
+                        if stop_at_first:
+                            break
+            finally:
+                pool.terminate()
+        return found
+
+    if urls:
+        # Only classify thumbnails whose header matches a known certificate
+        # template. This keeps OCR to ~1 image per listing (certificates have
+        # a consistent header); unknown/other document types are skipped.
+        header_urls = []
+        try:
+            for u in urls:
+                content = _fetch(src[u].xs or src[u].s or u, timeout=15)
+                if has_certificate_header(content):
+                    header_urls.append(u)
+        except Exception:
+            header_urls = urls  # header fetch failed -> be permissive
+
+        candidates = _ocr_urls(header_urls)
 
     # Stage 2: full-size, structured extraction for certificate candidates.
     for spec, _lines in candidates:
@@ -206,6 +317,11 @@ def analyze_vehicle_images(
             full_content = _fetch(spec.m or spec.s or spec.url)
             result = certificate.analyze_image(full_content, spec.url, spec.index, backend=backend)
             if result.get("certificate_detected"):
+                # Learn the header template for future runs.
+                try:
+                    register_header_template(_fetch(spec.xs or spec.s or spec.url))
+                except Exception:
+                    pass
                 entry = {
                     "source_image_url": spec.url,
                     "source_image_index": spec.index,
