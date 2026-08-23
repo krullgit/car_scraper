@@ -95,10 +95,11 @@ def main() -> None:
         conn = sqlite3.connect(str(config.DB_PATH))
         try:
             f = feed.build_feed(conn)
+            status_data = feed.build_status(f, conn)
         finally:
             conn.close()
         feed.write_json(f, config.FEED_FILE)
-        feed.write_json(feed.build_status(f), config.STATUS_FILE)
+        feed.write_json(status_data, config.STATUS_FILE)
         print(f"  Built feed: {len(f['vehicles'])} vehicles")
 
     files = []

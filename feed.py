@@ -127,13 +127,83 @@ def build_feed(conn: sqlite3.Connection) -> dict:
     }
 
 
-def build_status(feed: dict) -> dict:
-    """Small status file so the scheduler can see the scraper is alive."""
-    return {
-        "last_successful_scrape": feed["generated_at"],
+def build_status(feed: dict, conn: sqlite3.Connection | None = None) -> dict:
+    """Status file so the scheduler can tell data freshness from process liveness.
+
+    Crucial distinction:
+      - last_successful_scrape = the last scrape that completed with status 'ok'
+        (real data freshness from scrape_runs). NOT the current wall-clock time.
+      - last_attempt_at = the last time the tracker tried to run.
+      - generated_at   = when this status.json was produced.
+      - age_minutes    = how old the last successful scrape is.
+      - status         = 'ok' / 'stale' / 'error' based on the last run.
+    """
+    import sqlite3 as _sqlite3
+
+    now = _now_iso()
+    last_attempt = now
+    last_success = None
+    status = "ok"
+    error = None
+
+    own_conn = conn is None
+    if own_conn:
+        conn = _sqlite3.connect(str(config.DB_PATH))
+
+    try:
+        rows = conn.execute(
+            "SELECT finished_at, status FROM scrape_runs ORDER BY id DESC LIMIT 5"
+        ).fetchall()
+        if not rows:
+            status = "stale"
+        else:
+            last_attempt = rows[0][0] or last_attempt
+            last_run_status = rows[0][1] or ""
+            if last_run_status != "ok":
+                last_success = next(
+                    (r[0] for r in rows if r[1] == "ok"), None
+                )
+                # transient network/DNS timeouts -> 'stale'; hard errors -> 'error'
+                transient = ("timeout", "connection", "name resolution",
+                             "max retries", "dns", "ssl")
+                if any(t in last_run_status.lower() for t in transient) \
+                        and last_success is not None:
+                    status = "stale"
+                else:
+                    status = "error"
+                error = last_run_status if last_run_status != "ok" else None
+            else:
+                last_success = rows[0][0]
+
+            # If the tracker couldn't reach data at all, surface staleness.
+            if last_success is None:
+                status = "stale"
+    except Exception as e:
+        status = "error"
+        error = f"status_db_error: {e}"
+    finally:
+        if own_conn:
+            conn.close()
+
+    result = {
+        "status": status,
+        "generated_at": now,
+        "last_attempt_at": last_attempt,
         "vehicle_count": feed["vehicle_count"],
-        "status": "ok",
     }
+    if last_success:
+        result["last_successful_scrape"] = last_success
+        try:
+            age = (
+                __import__("datetime").datetime.now(__import__("datetime").timezone.utc)
+                - __import__("datetime").datetime.fromisoformat(last_success)
+            )
+            result["age_minutes"] = max(0, int(age.total_seconds() // 60))
+        except (ValueError, TypeError):
+            pass
+    if error:
+        result["error"] = error[:300]
+    return result
 
 
 def write_json(data: dict, out_path: Path) -> None:

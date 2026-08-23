@@ -104,7 +104,7 @@ def run_scrape(conn: sqlite3.Connection) -> None:
     try:
         feed_f = feed.build_feed(conn)
         feed.write_json(feed_f, config.FEED_FILE)
-        feed.write_json(feed.build_status(feed_f), config.STATUS_FILE)
+        feed.write_json(feed.build_status(feed_f, conn), config.STATUS_FILE)
         print(f"  Feed: {len(feed_f['vehicles'])} vehicles (status.json written)")
     except Exception as e:
         print(f"  WARN: feed build failed: {e}", file=sys.stderr)
