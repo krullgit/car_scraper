@@ -1,19 +1,23 @@
 #!/usr/bin/env python3
-"""Build the public cars.json feed (+ status.json) for the LLM scheduler.
+"""Build the public split feed for the LLM scheduler.
+
+Outputs:
+  - cars_index.json        small index (id, model, url, price, km, detail_file)
+  - cars/<id>.json         one full detail file per vehicle (raw_full_text, ...)
+  - status.json            scraper status / freshness
 
 This module only transports raw source data — it does NOT normalize or
 semantically interpret anything. The downstream LLM agent is the only part
 that judges equipment, location, features, etc.
 
-Per-vehicle core schema:
-    id, url, scraped_at, source, raw_full_text, source_fields
+Per-vehicle core schema (in cars/<id>.json):
+    id, url, scraped_at, source, raw_full_text, source_fields, image_analysis
 
 `source_fields` is the unmodified original API JSON (1:1 from the source).
 No location derivation, no feature heuristics, no dealer-name normalization.
 
 Usage:
-    python3 feed.py                # write cars.json next to this script
-    python3 feed.py --out path     # write to a custom path
+    python3 feed.py          # write the split feed next to this script
 """
 
 import argparse
@@ -153,21 +157,11 @@ def build_index(vehicles: list[dict]) -> list[dict]:
     return index
 
 
-def build_feed(conn: sqlite3.Connection) -> dict:
-    vehicles = build_vehicles(conn)
-    return {
-        "generated_at": _now_iso(),
-        "source": config.SOURCE,
-        "vehicle_count": len(vehicles),
-        "vehicles": vehicles,
-    }
-
-
 def write_split_feed(conn: sqlite3.Connection) -> tuple[dict, list[dict]]:
     """Write the split feed: cars_index.json + cars/<id>.json per vehicle.
 
-    Returns (feed_summary, index). Keeps the legacy full cars.json too for
-    backward compatibility, but the primary output is the split structure."""
+    Returns (feed_summary, index). The legacy full cars.json is no longer
+    produced — the split structure is the only output."""
     vehicles = build_vehicles(conn)
     index = build_index(vehicles)
 
@@ -183,14 +177,6 @@ def write_split_feed(conn: sqlite3.Connection) -> tuple[dict, list[dict]]:
     config.CARS_DIR.mkdir(parents=True, exist_ok=True)
     for v in vehicles:
         write_json(v, config.CARS_DIR / f"{v['id']}.json")
-
-    # Legacy full dump (kept for existing consumers; not the primary feed).
-    write_json({
-        "generated_at": _now_iso(),
-        "source": config.SOURCE,
-        "vehicle_count": len(vehicles),
-        "vehicles": vehicles,
-    }, config.FEED_FILE)
 
     return (
         {"generated_at": _now_iso(), "source": config.SOURCE,
@@ -287,21 +273,17 @@ def write_json(data: dict, out_path: Path) -> None:
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description="Build cars.json feed")
-    parser.add_argument("--out", type=str, default=str(config.FEED_FILE),
-                        help="Output path for the feed file")
+    parser = argparse.ArgumentParser(description="Build the split feed (index + per-vehicle files)")
     args = parser.parse_args()
 
     conn = sqlite3.connect(str(config.DB_PATH))
     try:
-        feed = build_feed(conn)
+        summary, index = write_split_feed(conn)
     finally:
         conn.close()
 
-    out = Path(args.out)
-    out.parent.mkdir(parents=True, exist_ok=True)
-    write_json(feed, out)
-    print(f"Feed written: {out} ({len(feed['vehicles'])} vehicles)")
+    print(f"Split feed written: {summary['vehicle_count']} vehicles "
+          f"({len(index)} index entries)")
 
 
 if __name__ == "__main__":

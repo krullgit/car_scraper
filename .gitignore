@@ -9,8 +9,11 @@ secrets.json
 __pycache__/
 *.pyc
 
-# Logs & generierte Ausgaben
+# Logs & generierte Ausgaben (werden vom Publish in das Repo gespiegelt,
+# aber nicht als Teil des Quellcodes versioniert)
 *.log
 cars_legacy.json
 cars.json
+cars_index.json
 status.json
+cars/

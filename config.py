@@ -14,7 +14,6 @@ from pathlib import Path
 SCRIPT_DIR = Path(__file__).resolve().parent
 DB_PATH = Path(os.environ.get("CAR_DB_PATH", SCRIPT_DIR / "cars.db"))
 JSON_EXPORT = SCRIPT_DIR / "cars_legacy.json"
-FEED_FILE = SCRIPT_DIR / "cars.json"          # legacy full dump (kept for compat)
 INDEX_FILE = SCRIPT_DIR / "cars_index.json"   # small index of all vehicles
 CARS_DIR = SCRIPT_DIR / "cars"                # per-vehicle detail files
 STATUS_FILE = SCRIPT_DIR / "status.json"
