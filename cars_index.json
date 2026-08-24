@@ -1,0 +1,2167 @@
+{
+  "generated_at": "2026-08-24T13:36:44+02:00",
+  "source": "volkswagen-automobile-berlin",
+  "vehicle_count": 240,
+  "vehicles": [
+    {
+      "id": "8720718",
+      "model": "Audi Q4 e-tron",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8720718",
+      "price": 23417,
+      "km": 31224,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8720718.json"
+    },
+    {
+      "id": "9081774",
+      "model": "VW ID.4",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/9081774",
+      "price": 24790,
+      "km": 111288,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/9081774.json"
+    },
+    {
+      "id": "8948605",
+      "model": "Skoda Enyaq",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8948605",
+      "price": 24860,
+      "km": 42908,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8948605.json"
+    },
+    {
+      "id": "8938727",
+      "model": "Audi Q4 Sportback e-tron",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8938727",
+      "price": 24950,
+      "km": 41070,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8938727.json"
+    },
+    {
+      "id": "8917983",
+      "model": "Skoda Enyaq",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8917983",
+      "price": 24960,
+      "km": 21800,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8917983.json"
+    },
+    {
+      "id": "8926383",
+      "model": "Audi Q4 e-tron",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8926383",
+      "price": 25350,
+      "km": 30055,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8926383.json"
+    },
+    {
+      "id": "9006583",
+      "model": "Audi Q4 e-tron",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/9006583",
+      "price": 25450,
+      "km": 45470,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/9006583.json"
+    },
+    {
+      "id": "9013663",
+      "model": "Audi Q4 Sportback e-tron",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/9013663",
+      "price": 25550,
+      "km": 71124,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/9013663.json"
+    },
+    {
+      "id": "8916000",
+      "model": "Audi Q4 Sportback e-tron",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8916000",
+      "price": 25740,
+      "km": 29000,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8916000.json"
+    },
+    {
+      "id": "8832684",
+      "model": "Audi Q4 e-tron",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8832684",
+      "price": 25850,
+      "km": 39691,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8832684.json"
+    },
+    {
+      "id": "8892017",
+      "model": "Audi Q4 e-tron",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8892017",
+      "price": 25912,
+      "km": 50776,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8892017.json"
+    },
+    {
+      "id": "8901255",
+      "model": "Audi Q4 e-tron",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8901255",
+      "price": 25950,
+      "km": 33713,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8901255.json"
+    },
+    {
+      "id": "8872217",
+      "model": "Audi Q4 Sportback e-tron",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8872217",
+      "price": 25960,
+      "km": 23120,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8872217.json"
+    },
+    {
+      "id": "9039928",
+      "model": "Audi Q4 e-tron",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/9039928",
+      "price": 25991.46,
+      "km": 31999,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/9039928.json"
+    },
+    {
+      "id": "8922501",
+      "model": "Audi Q4 e-tron",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8922501",
+      "price": 26410,
+      "km": 40815,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8922501.json"
+    },
+    {
+      "id": "8902032",
+      "model": "Audi Q4 e-tron",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8902032",
+      "price": 26550,
+      "km": 95757,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8902032.json"
+    },
+    {
+      "id": "8972809",
+      "model": "Audi Q4 Sportback e-tron",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8972809",
+      "price": 26950,
+      "km": 48259,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8972809.json"
+    },
+    {
+      "id": "9061266",
+      "model": "VW ID.5",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/9061266",
+      "price": 26980,
+      "km": 73386,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/9061266.json"
+    },
+    {
+      "id": "8807728",
+      "model": "VW ID.4",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8807728",
+      "price": 27496,
+      "km": 37340,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8807728.json"
+    },
+    {
+      "id": "8996721",
+      "model": "Skoda Enyaq",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8996721",
+      "price": 27690,
+      "km": 25843,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8996721.json"
+    },
+    {
+      "id": "8871577",
+      "model": "Audi Q4 e-tron",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8871577",
+      "price": 27740,
+      "km": 20374,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8871577.json"
+    },
+    {
+      "id": "8856234",
+      "model": "VW ID.4",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8856234",
+      "price": 27903,
+      "km": 101806,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8856234.json"
+    },
+    {
+      "id": "8977465",
+      "model": "Audi Q4 Sportback e-tron",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8977465",
+      "price": 27950,
+      "km": 53496,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8977465.json"
+    },
+    {
+      "id": "8849039",
+      "model": "Audi Q4 e-tron",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8849039",
+      "price": 27995,
+      "km": 80641,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8849039.json"
+    },
+    {
+      "id": "8877609",
+      "model": "Audi Q4 Sportback e-tron",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8877609",
+      "price": 28150,
+      "km": 33492,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8877609.json"
+    },
+    {
+      "id": "8957261",
+      "model": "VW ID.4",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8957261",
+      "price": 28231,
+      "km": 52694,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8957261.json"
+    },
+    {
+      "id": "8911678",
+      "model": "VW ID.5",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8911678",
+      "price": 28270,
+      "km": 49503,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8911678.json"
+    },
+    {
+      "id": "8883417",
+      "model": "Audi Q4 e-tron",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8883417",
+      "price": 28423,
+      "km": 77132,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8883417.json"
+    },
+    {
+      "id": "8957746",
+      "model": "VW ID.4",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8957746",
+      "price": 28430,
+      "km": 76308,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8957746.json"
+    },
+    {
+      "id": "8913258",
+      "model": "Audi Q4 e-tron",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8913258",
+      "price": 28433,
+      "km": 24228,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8913258.json"
+    },
+    {
+      "id": "8977922",
+      "model": "Audi Q4 e-tron",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8977922",
+      "price": 28440,
+      "km": 92009,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8977922.json"
+    },
+    {
+      "id": "8870805",
+      "model": "Audi Q4 e-tron",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8870805",
+      "price": 28460,
+      "km": 78500,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8870805.json"
+    },
+    {
+      "id": "8872185",
+      "model": "VW ID.4",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8872185",
+      "price": 28480,
+      "km": 73910,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8872185.json"
+    },
+    {
+      "id": "8972981",
+      "model": "Audi Q4 e-tron",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8972981",
+      "price": 28490,
+      "km": 80629,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8972981.json"
+    },
+    {
+      "id": "9046801",
+      "model": "VW ID.5",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/9046801",
+      "price": 28490,
+      "km": 42200,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/9046801.json"
+    },
+    {
+      "id": "8948639",
+      "model": "Audi Q4 e-tron",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8948639",
+      "price": 28540,
+      "km": 35352,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8948639.json"
+    },
+    {
+      "id": "8804215",
+      "model": "VW ID.4",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8804215",
+      "price": 28555,
+      "km": 25032,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8804215.json"
+    },
+    {
+      "id": "8901248",
+      "model": "Audi Q4 Sportback e-tron",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8901248",
+      "price": 28560,
+      "km": 68366,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8901248.json"
+    },
+    {
+      "id": "8804153",
+      "model": "VW ID.4",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8804153",
+      "price": 28630,
+      "km": 17126,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8804153.json"
+    },
+    {
+      "id": "8918037",
+      "model": "VW ID.5",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8918037",
+      "price": 28690,
+      "km": 39460,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8918037.json"
+    },
+    {
+      "id": "8925558",
+      "model": "VW ID.4",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8925558",
+      "price": 28780,
+      "km": 64299,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8925558.json"
+    },
+    {
+      "id": "8957204",
+      "model": "Audi Q4 e-tron",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8957204",
+      "price": 28860,
+      "km": 31408,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8957204.json"
+    },
+    {
+      "id": "9006649",
+      "model": "Audi Q4 e-tron",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/9006649",
+      "price": 28975,
+      "km": 91122,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/9006649.json"
+    },
+    {
+      "id": "9061253",
+      "model": "VW ID.4",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/9061253",
+      "price": 28980,
+      "km": 65132,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/9061253.json"
+    },
+    {
+      "id": "8903272",
+      "model": "Audi Q4 e-tron",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8903272",
+      "price": 29220,
+      "km": 47122,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8903272.json"
+    },
+    {
+      "id": "8916453",
+      "model": "Audi Q4 e-tron",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8916453",
+      "price": 29233,
+      "km": 80851,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8916453.json"
+    },
+    {
+      "id": "8936037",
+      "model": "Audi Q4 Sportback e-tron",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8936037",
+      "price": 29350,
+      "km": 59981,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8936037.json"
+    },
+    {
+      "id": "8903303",
+      "model": "Audi Q4 e-tron",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8903303",
+      "price": 29450,
+      "km": 86186,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8903303.json"
+    },
+    {
+      "id": "8934045",
+      "model": "Audi Q4 Sportback e-tron",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8934045",
+      "price": 29450,
+      "km": 67961,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8934045.json"
+    },
+    {
+      "id": "9086470",
+      "model": "VW ID.5",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/9086470",
+      "price": 29470,
+      "km": 67643,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/9086470.json"
+    },
+    {
+      "id": "8652667",
+      "model": "Audi Q4 Sportback e-tron",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8652667",
+      "price": 29488,
+      "km": 34789,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8652667.json"
+    },
+    {
+      "id": "8898687",
+      "model": "Audi Q4 e-tron",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8898687",
+      "price": 29490,
+      "km": 19935,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8898687.json"
+    },
+    {
+      "id": "8959730",
+      "model": "VW ID.5",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8959730",
+      "price": 29675,
+      "km": 78349,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8959730.json"
+    },
+    {
+      "id": "8908490",
+      "model": "VW ID.5",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8908490",
+      "price": 29680,
+      "km": 50796,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8908490.json"
+    },
+    {
+      "id": "8937293",
+      "model": "Audi Q4 Sportback e-tron",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8937293",
+      "price": 29789,
+      "km": 92690,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8937293.json"
+    },
+    {
+      "id": "8895163",
+      "model": "Audi Q4 e-tron",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8895163",
+      "price": 29913,
+      "km": 44760,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8895163.json"
+    },
+    {
+      "id": "8995018",
+      "model": "VW ID.5",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8995018",
+      "price": 29930,
+      "km": 88674,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8995018.json"
+    },
+    {
+      "id": "8825676",
+      "model": "Audi Q4 e-tron",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8825676",
+      "price": 29950,
+      "km": 53112,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8825676.json"
+    },
+    {
+      "id": "9061265",
+      "model": "VW ID.5",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/9061265",
+      "price": 29980,
+      "km": 47603,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/9061265.json"
+    },
+    {
+      "id": "8766927",
+      "model": "Audi Q4 e-tron",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8766927",
+      "price": 29990,
+      "km": 18820,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8766927.json"
+    },
+    {
+      "id": "8806835",
+      "model": "VW ID.5",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8806835",
+      "price": 30250,
+      "km": 72729,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8806835.json"
+    },
+    {
+      "id": "8757003",
+      "model": "Audi Q4 e-tron",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8757003",
+      "price": 30420,
+      "km": 78129,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8757003.json"
+    },
+    {
+      "id": "8986833",
+      "model": "VW ID.5",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8986833",
+      "price": 30680,
+      "km": 48790,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8986833.json"
+    },
+    {
+      "id": "8866209",
+      "model": "Audi Q4 e-tron",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8866209",
+      "price": 30682,
+      "km": 44649,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8866209.json"
+    },
+    {
+      "id": "9061273",
+      "model": "Skoda Enyaq",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/9061273",
+      "price": 30740,
+      "km": 88460,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/9061273.json"
+    },
+    {
+      "id": "9035789",
+      "model": "VW ID.4",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/9035789",
+      "price": 30850,
+      "km": 60186,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/9035789.json"
+    },
+    {
+      "id": "9017986",
+      "model": "Audi Q4 e-tron",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/9017986",
+      "price": 30870,
+      "km": 41083,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/9017986.json"
+    },
+    {
+      "id": "8901252",
+      "model": "Audi Q4 e-tron",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8901252",
+      "price": 30880,
+      "km": 68153,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8901252.json"
+    },
+    {
+      "id": "8855758",
+      "model": "Audi Q4 e-tron",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8855758",
+      "price": 30900,
+      "km": 26600,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8855758.json"
+    },
+    {
+      "id": "8872221",
+      "model": "Audi Q4 Sportback e-tron",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8872221",
+      "price": 30900,
+      "km": 59700,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8872221.json"
+    },
+    {
+      "id": "8936537",
+      "model": "Audi Q4 e-tron",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8936537",
+      "price": 30900,
+      "km": 14150,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8936537.json"
+    },
+    {
+      "id": "8671646",
+      "model": "Audi Q4 e-tron",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8671646",
+      "price": 30920,
+      "km": 69025,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8671646.json"
+    },
+    {
+      "id": "8919525",
+      "model": "VW ID.4",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8919525",
+      "price": 30930,
+      "km": 51452,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8919525.json"
+    },
+    {
+      "id": "8962412",
+      "model": "Audi Q4 e-tron",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8962412",
+      "price": 30930,
+      "km": 81008,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8962412.json"
+    },
+    {
+      "id": "8965857",
+      "model": "VW ID.4",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8965857",
+      "price": 30980,
+      "km": 60404,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8965857.json"
+    },
+    {
+      "id": "8977953",
+      "model": "VW ID.4",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8977953",
+      "price": 30980,
+      "km": 59623,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8977953.json"
+    },
+    {
+      "id": "8975338",
+      "model": "Audi Q4 Sportback e-tron",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8975338",
+      "price": 30990,
+      "km": 40264,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8975338.json"
+    },
+    {
+      "id": "8957454",
+      "model": "Audi Q4 e-tron",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8957454",
+      "price": 31250,
+      "km": 41548,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8957454.json"
+    },
+    {
+      "id": "8916462",
+      "model": "Audi Q4 e-tron",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8916462",
+      "price": 31383,
+      "km": 69728,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8916462.json"
+    },
+    {
+      "id": "9053895",
+      "model": "Audi Q4 e-tron",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/9053895",
+      "price": 31390,
+      "km": 65700,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/9053895.json"
+    },
+    {
+      "id": "8982731",
+      "model": "Audi Q4 e-tron",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8982731",
+      "price": 31440,
+      "km": 73865,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8982731.json"
+    },
+    {
+      "id": "8891928",
+      "model": "Audi Q4 e-tron",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8891928",
+      "price": 31450,
+      "km": 52855,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8891928.json"
+    },
+    {
+      "id": "8977745",
+      "model": "Audi Q4 e-tron",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8977745",
+      "price": 31470,
+      "km": 78543,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8977745.json"
+    },
+    {
+      "id": "8868844",
+      "model": "VW ID.4",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8868844",
+      "price": 31663,
+      "km": 45856,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8868844.json"
+    },
+    {
+      "id": "8852833",
+      "model": "VW ID.5",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8852833",
+      "price": 31670,
+      "km": 63563,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8852833.json"
+    },
+    {
+      "id": "9046831",
+      "model": "Audi Q4 e-tron",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/9046831",
+      "price": 31691,
+      "km": 64706,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/9046831.json"
+    },
+    {
+      "id": "9018013",
+      "model": "Audi Q4 e-tron",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/9018013",
+      "price": 31840,
+      "km": 42209,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/9018013.json"
+    },
+    {
+      "id": "9018016",
+      "model": "Audi Q4 e-tron",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/9018016",
+      "price": 31840,
+      "km": 88223,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/9018016.json"
+    },
+    {
+      "id": "9046385",
+      "model": "Audi Q4 e-tron",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/9046385",
+      "price": 31840,
+      "km": 60158,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/9046385.json"
+    },
+    {
+      "id": "8849712",
+      "model": "Skoda Enyaq",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8849712",
+      "price": 31889,
+      "km": 15336,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8849712.json"
+    },
+    {
+      "id": "9046848",
+      "model": "Skoda Enyaq",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/9046848",
+      "price": 31895,
+      "km": 27801,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/9046848.json"
+    },
+    {
+      "id": "9013532",
+      "model": "Audi Q4 e-tron",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/9013532",
+      "price": 31900,
+      "km": 57400,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/9013532.json"
+    },
+    {
+      "id": "9046390",
+      "model": "Audi Q4 e-tron",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/9046390",
+      "price": 31940,
+      "km": 34254,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/9046390.json"
+    },
+    {
+      "id": "8996650",
+      "model": "Audi Q4 e-tron",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8996650",
+      "price": 31970,
+      "km": 58644,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8996650.json"
+    },
+    {
+      "id": "9018007",
+      "model": "VW ID.5",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/9018007",
+      "price": 31980,
+      "km": 29689,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/9018007.json"
+    },
+    {
+      "id": "9053889",
+      "model": "VW ID.5",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/9053889",
+      "price": 31980,
+      "km": 47503,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/9053889.json"
+    },
+    {
+      "id": "9053892",
+      "model": "VW ID.4",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/9053892",
+      "price": 31980,
+      "km": 58022,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/9053892.json"
+    },
+    {
+      "id": "9061256",
+      "model": "VW ID.5",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/9061256",
+      "price": 31980,
+      "km": 69666,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/9061256.json"
+    },
+    {
+      "id": "9090781",
+      "model": "VW ID.5",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/9090781",
+      "price": 31980,
+      "km": 64585,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/9090781.json"
+    },
+    {
+      "id": "8901266",
+      "model": "Skoda Enyaq",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8901266",
+      "price": 31990,
+      "km": 66075,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8901266.json"
+    },
+    {
+      "id": "8972807",
+      "model": "Audi Q4 e-tron",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8972807",
+      "price": 31990,
+      "km": 65441,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8972807.json"
+    },
+    {
+      "id": "8883242",
+      "model": "VW ID.4",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8883242",
+      "price": 32250,
+      "km": 43826,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8883242.json"
+    },
+    {
+      "id": "8923128",
+      "model": "Skoda Enyaq",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8923128",
+      "price": 32289,
+      "km": 36215,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8923128.json"
+    },
+    {
+      "id": "8882575",
+      "model": "Audi Q4 e-tron",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8882575",
+      "price": 32330,
+      "km": 26767,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8882575.json"
+    },
+    {
+      "id": "8854827",
+      "model": "VW ID.4",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8854827",
+      "price": 32390,
+      "km": 66223,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8854827.json"
+    },
+    {
+      "id": "8934250",
+      "model": "VW ID.5",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8934250",
+      "price": 32450,
+      "km": 53687,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8934250.json"
+    },
+    {
+      "id": "8934207",
+      "model": "Audi Q4 e-tron",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8934207",
+      "price": 32460,
+      "km": 36432,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8934207.json"
+    },
+    {
+      "id": "8939320",
+      "model": "Audi Q4 e-tron",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8939320",
+      "price": 32460,
+      "km": 30534,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8939320.json"
+    },
+    {
+      "id": "9061252",
+      "model": "VW ID.4",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/9061252",
+      "price": 32480,
+      "km": 43272,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/9061252.json"
+    },
+    {
+      "id": "8785081",
+      "model": "Audi Q4 Sportback e-tron",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8785081",
+      "price": 32486,
+      "km": 56266,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8785081.json"
+    },
+    {
+      "id": "8807649",
+      "model": "Audi Q4 Sportback e-tron",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8807649",
+      "price": 32490,
+      "km": 27743,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8807649.json"
+    },
+    {
+      "id": "8963003",
+      "model": "Audi Q4 e-tron",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8963003",
+      "price": 32650,
+      "km": 54700,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8963003.json"
+    },
+    {
+      "id": "8901721",
+      "model": "Audi Q4 e-tron",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8901721",
+      "price": 32660,
+      "km": 25711,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8901721.json"
+    },
+    {
+      "id": "8918988",
+      "model": "Audi Q4 Sportback e-tron",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8918988",
+      "price": 32700,
+      "km": 59820,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8918988.json"
+    },
+    {
+      "id": "9035757",
+      "model": "Audi Q4 e-tron",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/9035757",
+      "price": 32730,
+      "km": 60377,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/9035757.json"
+    },
+    {
+      "id": "8817698",
+      "model": "VW ID.5",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8817698",
+      "price": 32755,
+      "km": 19909,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8817698.json"
+    },
+    {
+      "id": "9041963",
+      "model": "Audi Q4 Sportback e-tron",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/9041963",
+      "price": 32790,
+      "km": 11200,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/9041963.json"
+    },
+    {
+      "id": "8963066",
+      "model": "Skoda Enyaq",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8963066",
+      "price": 32850,
+      "km": 58136,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8963066.json"
+    },
+    {
+      "id": "8846878",
+      "model": "Audi Q4 e-tron",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8846878",
+      "price": 32880,
+      "km": 43258,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8846878.json"
+    },
+    {
+      "id": "9086965",
+      "model": "Audi Q4 e-tron",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/9086965",
+      "price": 32890,
+      "km": 85200,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/9086965.json"
+    },
+    {
+      "id": "8942331",
+      "model": "VW ID.5",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8942331",
+      "price": 32950,
+      "km": 35497,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8942331.json"
+    },
+    {
+      "id": "8802226",
+      "model": "VW ID.5",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8802226",
+      "price": 32960,
+      "km": 25800,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8802226.json"
+    },
+    {
+      "id": "8996649",
+      "model": "Audi Q4 e-tron",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8996649",
+      "price": 32970,
+      "km": 59320,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8996649.json"
+    },
+    {
+      "id": "8895154",
+      "model": "VW ID.5",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8895154",
+      "price": 32980,
+      "km": 34287,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8895154.json"
+    },
+    {
+      "id": "9053894",
+      "model": "VW ID.5",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/9053894",
+      "price": 32980,
+      "km": 27216,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/9053894.json"
+    },
+    {
+      "id": "9061267",
+      "model": "VW ID.4",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/9061267",
+      "price": 32980,
+      "km": 74757,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/9061267.json"
+    },
+    {
+      "id": "8875674",
+      "model": "VW ID.4",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8875674",
+      "price": 32982,
+      "km": 74614,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8875674.json"
+    },
+    {
+      "id": "8913178",
+      "model": "VW ID.4",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8913178",
+      "price": 32990,
+      "km": 40400,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8913178.json"
+    },
+    {
+      "id": "9045931",
+      "model": "Audi Q4 e-tron",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/9045931",
+      "price": 32991,
+      "km": 64263,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/9045931.json"
+    },
+    {
+      "id": "8603493",
+      "model": "Audi Q4 e-tron",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8603493",
+      "price": 33130,
+      "km": 56685,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8603493.json"
+    },
+    {
+      "id": "8902027",
+      "model": "Audi Q4 e-tron",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8902027",
+      "price": 33350,
+      "km": 56883,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8902027.json"
+    },
+    {
+      "id": "8926327",
+      "model": "VW ID.4",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8926327",
+      "price": 33450,
+      "km": 28162,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8926327.json"
+    },
+    {
+      "id": "8934333",
+      "model": "VW ID.4",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8934333",
+      "price": 33480,
+      "km": 5700,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8934333.json"
+    },
+    {
+      "id": "9061250",
+      "model": "VW ID.5",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/9061250",
+      "price": 33480,
+      "km": 42822,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/9061250.json"
+    },
+    {
+      "id": "8849086",
+      "model": "Skoda Enyaq",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8849086",
+      "price": 33490,
+      "km": 64411,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8849086.json"
+    },
+    {
+      "id": "8911075",
+      "model": "Audi Q4 e-tron",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8911075",
+      "price": 33490,
+      "km": 46358,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8911075.json"
+    },
+    {
+      "id": "9048626",
+      "model": "VW ID.4",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/9048626",
+      "price": 33490,
+      "km": 52486,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/9048626.json"
+    },
+    {
+      "id": "8838601",
+      "model": "VW ID.4",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8838601",
+      "price": 33550,
+      "km": 51279,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8838601.json"
+    },
+    {
+      "id": "9006636",
+      "model": "VW ID.4",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/9006636",
+      "price": 33555,
+      "km": 29800,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/9006636.json"
+    },
+    {
+      "id": "8953457",
+      "model": "VW ID.4",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8953457",
+      "price": 33595,
+      "km": 22687,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8953457.json"
+    },
+    {
+      "id": "8903266",
+      "model": "Audi Q4 e-tron",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8903266",
+      "price": 33860,
+      "km": 62374,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8903266.json"
+    },
+    {
+      "id": "9081836",
+      "model": "VW ID.5",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/9081836",
+      "price": 33870,
+      "km": 35070,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/9081836.json"
+    },
+    {
+      "id": "8922473",
+      "model": "Audi Q4 e-tron",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8922473",
+      "price": 33880,
+      "km": 16150,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8922473.json"
+    },
+    {
+      "id": "8929446",
+      "model": "Audi Q4 Sportback e-tron",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8929446",
+      "price": 33880,
+      "km": 56400,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8929446.json"
+    },
+    {
+      "id": "8903793",
+      "model": "Audi Q4 Sportback e-tron",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8903793",
+      "price": 33900,
+      "km": 34500,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8903793.json"
+    },
+    {
+      "id": "8939976",
+      "model": "VW ID.4",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8939976",
+      "price": 33900,
+      "km": 35586,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8939976.json"
+    },
+    {
+      "id": "8760229",
+      "model": "VW ID.5",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8760229",
+      "price": 33920,
+      "km": 10953,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8760229.json"
+    },
+    {
+      "id": "8915648",
+      "model": "Audi Q4 e-tron",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8915648",
+      "price": 33930,
+      "km": 46677,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8915648.json"
+    },
+    {
+      "id": "8807574",
+      "model": "VW ID.5",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8807574",
+      "price": 33950,
+      "km": 12152,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8807574.json"
+    },
+    {
+      "id": "8888988",
+      "model": "VW ID.5",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8888988",
+      "price": 33950,
+      "km": 26095,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8888988.json"
+    },
+    {
+      "id": "8938731",
+      "model": "Audi Q4 e-tron",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8938731",
+      "price": 33960,
+      "km": 35400,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8938731.json"
+    },
+    {
+      "id": "8952953",
+      "model": "VW ID.4",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8952953",
+      "price": 33970,
+      "km": 54872,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8952953.json"
+    },
+    {
+      "id": "8954967",
+      "model": "VW ID.5",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8954967",
+      "price": 33975,
+      "km": 57120,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8954967.json"
+    },
+    {
+      "id": "8972824",
+      "model": "VW ID.4",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8972824",
+      "price": 33980,
+      "km": 44165,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8972824.json"
+    },
+    {
+      "id": "8986812",
+      "model": "VW ID.4",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8986812",
+      "price": 33980,
+      "km": 53811,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8986812.json"
+    },
+    {
+      "id": "8989587",
+      "model": "Audi Q4 e-tron",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8989587",
+      "price": 33990,
+      "km": 44547,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8989587.json"
+    },
+    {
+      "id": "9086976",
+      "model": "Audi Q4 e-tron",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/9086976",
+      "price": 34440,
+      "km": 44669,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/9086976.json"
+    },
+    {
+      "id": "8939498",
+      "model": "VW ID.4",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8939498",
+      "price": 34460,
+      "km": 23671,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8939498.json"
+    },
+    {
+      "id": "8872207",
+      "model": "VW ID.4",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8872207",
+      "price": 34480,
+      "km": 48367,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8872207.json"
+    },
+    {
+      "id": "8872209",
+      "model": "VW ID.4",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8872209",
+      "price": 34480,
+      "km": 25794,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8872209.json"
+    },
+    {
+      "id": "8910602",
+      "model": "Audi Q4 Sportback e-tron",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8910602",
+      "price": 34484,
+      "km": 52712,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8910602.json"
+    },
+    {
+      "id": "8911793",
+      "model": "Audi Q4 Sportback e-tron",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8911793",
+      "price": 34490,
+      "km": 46177,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8911793.json"
+    },
+    {
+      "id": "8921494",
+      "model": "Audi Q4 Sportback e-tron",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8921494",
+      "price": 34490,
+      "km": 40312,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8921494.json"
+    },
+    {
+      "id": "8982736",
+      "model": "Audi Q4 e-tron",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8982736",
+      "price": 34500,
+      "km": 59160,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8982736.json"
+    },
+    {
+      "id": "8996685",
+      "model": "Audi Q4 e-tron",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8996685",
+      "price": 34540,
+      "km": 80369,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8996685.json"
+    },
+    {
+      "id": "8832623",
+      "model": "VW ID.5",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8832623",
+      "price": 34550,
+      "km": 19593,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8832623.json"
+    },
+    {
+      "id": "8916346",
+      "model": "VW ID.5",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8916346",
+      "price": 34550,
+      "km": 21384,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8916346.json"
+    },
+    {
+      "id": "8986347",
+      "model": "VW ID.4",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8986347",
+      "price": 34680,
+      "km": 30678,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8986347.json"
+    },
+    {
+      "id": "8883425",
+      "model": "VW ID.4",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8883425",
+      "price": 34720,
+      "km": 40640,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8883425.json"
+    },
+    {
+      "id": "8959714",
+      "model": "Audi Q4 e-tron",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8959714",
+      "price": 34840,
+      "km": 41188,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8959714.json"
+    },
+    {
+      "id": "8953097",
+      "model": "VW ID.4",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8953097",
+      "price": 34870,
+      "km": 21976,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8953097.json"
+    },
+    {
+      "id": "9061671",
+      "model": "Audi Q4 e-tron",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/9061671",
+      "price": 34879,
+      "km": 60453,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/9061671.json"
+    },
+    {
+      "id": "8763121",
+      "model": "VW ID.5",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8763121",
+      "price": 34880,
+      "km": 41486,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8763121.json"
+    },
+    {
+      "id": "8830044",
+      "model": "Audi Q4 e-tron",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8830044",
+      "price": 34880,
+      "km": 34331,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8830044.json"
+    },
+    {
+      "id": "8889062",
+      "model": "Audi Q4 Sportback e-tron",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8889062",
+      "price": 34894,
+      "km": 57440,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8889062.json"
+    },
+    {
+      "id": "8866088",
+      "model": "Audi Q4 e-tron",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8866088",
+      "price": 34900,
+      "km": 29990,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8866088.json"
+    },
+    {
+      "id": "8882528",
+      "model": "Audi Q4 e-tron",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8882528",
+      "price": 34950,
+      "km": 42334,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8882528.json"
+    },
+    {
+      "id": "8990064",
+      "model": "Audi Q4 e-tron",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8990064",
+      "price": 34970,
+      "km": 35853,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8990064.json"
+    },
+    {
+      "id": "8804316",
+      "model": "Audi Q4 e-tron",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8804316",
+      "price": 34988,
+      "km": 59768,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8804316.json"
+    },
+    {
+      "id": "8938770",
+      "model": "Audi Q4 e-tron",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8938770",
+      "price": 35111,
+      "km": 77061,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8938770.json"
+    },
+    {
+      "id": "8918724",
+      "model": "VW ID.4",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8918724",
+      "price": 35430,
+      "km": 61650,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8918724.json"
+    },
+    {
+      "id": "9040358",
+      "model": "Audi Q4 e-tron",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/9040358",
+      "price": 35479,
+      "km": 38037,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/9040358.json"
+    },
+    {
+      "id": "8891969",
+      "model": "VW ID.5",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8891969",
+      "price": 35650,
+      "km": 9608,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8891969.json"
+    },
+    {
+      "id": "8916424",
+      "model": "VW ID.5",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8916424",
+      "price": 35650,
+      "km": 45186,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8916424.json"
+    },
+    {
+      "id": "9005845",
+      "model": "Skoda Enyaq",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/9005845",
+      "price": 35795,
+      "km": 65630,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/9005845.json"
+    },
+    {
+      "id": "8941835",
+      "model": "Audi Q4 e-tron",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8941835",
+      "price": 35960,
+      "km": 25400,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8941835.json"
+    },
+    {
+      "id": "8937181",
+      "model": "Audi Q4 Sportback e-tron",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8937181",
+      "price": 35980,
+      "km": 62700,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8937181.json"
+    },
+    {
+      "id": "7862519",
+      "model": "Skoda Elroq",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/7862519",
+      "price": 35999,
+      "km": 5288,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/7862519.json"
+    },
+    {
+      "id": "8854833",
+      "model": "Skoda Enyaq",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8854833",
+      "price": 36333,
+      "km": 12081,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8854833.json"
+    },
+    {
+      "id": "8962996",
+      "model": "Audi Q4 e-tron",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8962996",
+      "price": 36420,
+      "km": 30486,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8962996.json"
+    },
+    {
+      "id": "8986790",
+      "model": "Audi Q4 e-tron",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8986790",
+      "price": 36540,
+      "km": 59062,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8986790.json"
+    },
+    {
+      "id": "8895049",
+      "model": "Audi Q4 e-tron",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8895049",
+      "price": 36660,
+      "km": 28215,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8895049.json"
+    },
+    {
+      "id": "8926374",
+      "model": "Audi Q4 e-tron",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8926374",
+      "price": 36782,
+      "km": 39318,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8926374.json"
+    },
+    {
+      "id": "8849764",
+      "model": "Audi Q4 e-tron",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8849764",
+      "price": 36820,
+      "km": 63399,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8849764.json"
+    },
+    {
+      "id": "9077435",
+      "model": "Audi Q4 e-tron",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/9077435",
+      "price": 36840,
+      "km": 32240,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/9077435.json"
+    },
+    {
+      "id": "9017992",
+      "model": "Audi Q4 e-tron",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/9017992",
+      "price": 36880,
+      "km": 20301,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/9017992.json"
+    },
+    {
+      "id": "8908147",
+      "model": "Audi Q4 e-tron",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8908147",
+      "price": 36900,
+      "km": 53560,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8908147.json"
+    },
+    {
+      "id": "8735039",
+      "model": "VW ID.5",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8735039",
+      "price": 36950,
+      "km": 18627,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8735039.json"
+    },
+    {
+      "id": "8963001",
+      "model": "VW ID.4",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8963001",
+      "price": 36980,
+      "km": 24461,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8963001.json"
+    },
+    {
+      "id": "8855370",
+      "model": "Audi Q4 e-tron",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8855370",
+      "price": 36990,
+      "km": 30625,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8855370.json"
+    },
+    {
+      "id": "8821725",
+      "model": "VW ID.4",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8821725",
+      "price": 36999,
+      "km": 34493,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8821725.json"
+    },
+    {
+      "id": "8372962",
+      "model": "Audi Q4 Sportback e-tron",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8372962",
+      "price": 37250,
+      "km": 43001,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8372962.json"
+    },
+    {
+      "id": "8982757",
+      "model": "Audi Q4 Sportback e-tron",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8982757",
+      "price": 37490,
+      "km": 53904,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8982757.json"
+    },
+    {
+      "id": "8910606",
+      "model": "Audi Q4 e-tron",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8910606",
+      "price": 37593,
+      "km": 38739,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8910606.json"
+    },
+    {
+      "id": "9035724",
+      "model": "VW ID.4",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/9035724",
+      "price": 37770,
+      "km": 3425,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/9035724.json"
+    },
+    {
+      "id": "8826020",
+      "model": "Audi Q4 e-tron",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8826020",
+      "price": 37900,
+      "km": 17360,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8826020.json"
+    },
+    {
+      "id": "8891300",
+      "model": "VW ID.5",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8891300",
+      "price": 37950,
+      "km": 35860,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8891300.json"
+    },
+    {
+      "id": "8965911",
+      "model": "VW ID.4",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8965911",
+      "price": 37990,
+      "km": 42839,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8965911.json"
+    },
+    {
+      "id": "9018630",
+      "model": "Audi Q4 e-tron",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/9018630",
+      "price": 37991,
+      "km": 49417,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/9018630.json"
+    },
+    {
+      "id": "8760720",
+      "model": "Audi Q4 Sportback e-tron",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8760720",
+      "price": 38248,
+      "km": 8020,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8760720.json"
+    },
+    {
+      "id": "8743199",
+      "model": "Audi Q4 Sportback e-tron",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8743199",
+      "price": 38258,
+      "km": 5925,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8743199.json"
+    },
+    {
+      "id": "8861620",
+      "model": "Audi Q4 Sportback e-tron",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8861620",
+      "price": 38353,
+      "km": 55377,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8861620.json"
+    },
+    {
+      "id": "9062426",
+      "model": "Audi Q4 Sportback e-tron",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/9062426",
+      "price": 38390,
+      "km": 59900,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/9062426.json"
+    },
+    {
+      "id": "8929485",
+      "model": "Audi Q4 Sportback e-tron",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8929485",
+      "price": 38432,
+      "km": 75777,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8929485.json"
+    },
+    {
+      "id": "8818438",
+      "model": "Audi Q4 e-tron",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8818438",
+      "price": 38440,
+      "km": 8400,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8818438.json"
+    },
+    {
+      "id": "8972364",
+      "model": "Audi Q4 Sportback e-tron",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8972364",
+      "price": 38440,
+      "km": 65719,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8972364.json"
+    },
+    {
+      "id": "8977744",
+      "model": "Audi Q4 e-tron",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8977744",
+      "price": 38450,
+      "km": 30910,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8977744.json"
+    },
+    {
+      "id": "9006592",
+      "model": "Audi Q4 Sportback e-tron",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/9006592",
+      "price": 38690,
+      "km": 33100,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/9006592.json"
+    },
+    {
+      "id": "8315166",
+      "model": "Skoda Elroq",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8315166",
+      "price": 38740,
+      "km": 4434,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8315166.json"
+    },
+    {
+      "id": "8992271",
+      "model": "Audi Q4 e-tron",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8992271",
+      "price": 38740,
+      "km": 50412,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8992271.json"
+    },
+    {
+      "id": "8791318",
+      "model": "VW ID.5",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8791318",
+      "price": 38750,
+      "km": 27287,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8791318.json"
+    },
+    {
+      "id": "8841242",
+      "model": "VW ID.5",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8841242",
+      "price": 38888,
+      "km": 23177,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8841242.json"
+    },
+    {
+      "id": "9081830",
+      "model": "Skoda Enyaq",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/9081830",
+      "price": 38888,
+      "km": 38066,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/9081830.json"
+    },
+    {
+      "id": "8818427",
+      "model": "Audi Q4 e-tron",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8818427",
+      "price": 38900,
+      "km": 7100,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8818427.json"
+    },
+    {
+      "id": "8986823",
+      "model": "Audi Q4 e-tron",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8986823",
+      "price": 38940,
+      "km": 26395,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8986823.json"
+    },
+    {
+      "id": "8709697",
+      "model": "Audi Q4 e-tron",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8709697",
+      "price": 38980,
+      "km": 5548,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8709697.json"
+    },
+    {
+      "id": "9061680",
+      "model": "Audi Q4 e-tron",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/9061680",
+      "price": 38980,
+      "km": 33075,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/9061680.json"
+    },
+    {
+      "id": "8902790",
+      "model": "Audi Q4 e-tron",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8902790",
+      "price": 38990,
+      "km": 46376,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8902790.json"
+    },
+    {
+      "id": "9046392",
+      "model": "Audi Q4 e-tron",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/9046392",
+      "price": 38991,
+      "km": 25221,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/9046392.json"
+    },
+    {
+      "id": "8948655",
+      "model": "Audi Q4 e-tron",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8948655",
+      "price": 39292,
+      "km": 8066,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8948655.json"
+    },
+    {
+      "id": "9046386",
+      "model": "Audi Q4 e-tron",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/9046386",
+      "price": 39440,
+      "km": 59675,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/9046386.json"
+    },
+    {
+      "id": "8800446",
+      "model": "Audi Q4 e-tron",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8800446",
+      "price": 39517,
+      "km": 7434,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8800446.json"
+    },
+    {
+      "id": "8760724",
+      "model": "Audi Q4 e-tron",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8760724",
+      "price": 39518,
+      "km": 8163,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8760724.json"
+    },
+    {
+      "id": "8745295",
+      "model": "VW ID.5",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8745295",
+      "price": 39750,
+      "km": 13034,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8745295.json"
+    },
+    {
+      "id": "9035818",
+      "model": "Skoda Enyaq",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/9035818",
+      "price": 39750,
+      "km": 61897,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/9035818.json"
+    },
+    {
+      "id": "8986879",
+      "model": "Audi Q4 e-tron",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8986879",
+      "price": 39930,
+      "km": 67840,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8986879.json"
+    },
+    {
+      "id": "9053914",
+      "model": "Audi Q4 Sportback e-tron",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/9053914",
+      "price": 39940,
+      "km": 12176,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/9053914.json"
+    },
+    {
+      "id": "8820975",
+      "model": "Audi Q4 e-tron",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8820975",
+      "price": 39990,
+      "km": 10220,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8820975.json"
+    },
+    {
+      "id": "8992776",
+      "model": "VW ID.5",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8992776",
+      "price": 39990,
+      "km": 23469,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8992776.json"
+    },
+    {
+      "id": "9018547",
+      "model": "Audi Q4 e-tron",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/9018547",
+      "price": 39990,
+      "km": 34978,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/9018547.json"
+    }
+  ]
+}
