@@ -100,12 +100,12 @@ def run_scrape(conn: sqlite3.Connection) -> None:
     # Only cars that were never enriched (or miss raw data) are scraped.
     _run_subprocess("enrich", ["enrich.py"], timeout=10800)
 
-    # Build the public cars.json feed (raw_full_text for the LLM agent)
+    # Build the public split feed (cars_index.json + cars/<id>.json) for the agent
     try:
-        feed_f = feed.build_feed(conn)
-        feed.write_json(feed_f, config.FEED_FILE)
-        feed.write_json(feed.build_status(feed_f, conn), config.STATUS_FILE)
-        print(f"  Feed: {len(feed_f['vehicles'])} vehicles (status.json written)")
+        feed_summary, index = feed.write_split_feed(conn)
+        feed.write_json(feed.build_status(feed_summary, conn), config.STATUS_FILE)
+        print(f"  Feed: {feed_summary['vehicle_count']} vehicles "
+              f"({len(index)} index entries, status.json written)")
     except Exception as e:
         print(f"  WARN: feed build failed: {e}", file=sys.stderr)
 

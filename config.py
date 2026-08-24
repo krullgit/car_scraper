@@ -14,7 +14,9 @@ from pathlib import Path
 SCRIPT_DIR = Path(__file__).resolve().parent
 DB_PATH = Path(os.environ.get("CAR_DB_PATH", SCRIPT_DIR / "cars.db"))
 JSON_EXPORT = SCRIPT_DIR / "cars_legacy.json"
-FEED_FILE = SCRIPT_DIR / "cars.json"
+FEED_FILE = SCRIPT_DIR / "cars.json"          # legacy full dump (kept for compat)
+INDEX_FILE = SCRIPT_DIR / "cars_index.json"   # small index of all vehicles
+CARS_DIR = SCRIPT_DIR / "cars"                # per-vehicle detail files
 STATUS_FILE = SCRIPT_DIR / "status.json"
 SECRETS_FILE = SCRIPT_DIR / "secrets.json"
 
@@ -41,6 +43,17 @@ MAX_PRICE = 40_000  # price ceiling in EUR
 
 SOURCE = "volkswagen-automobile-berlin"
 BASE_URL = "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche"
+
+# Human-readable model names for the index (used only for display in the
+# index, never for filtering or interpreting equipment).
+MODEL_NAMES: dict[int, str] = {
+    1102221: "Audi Q4 e-tron",
+    1102353: "Audi Q4 Sportback e-tron",
+    4602192: "Skoda Enyaq",
+    4602938: "Skoda Elroq",
+    5202184: "VW ID.4",
+    5202335: "VW ID.5",
+}
 
 # --- GitHub publishing ----------------------------------------------------
 

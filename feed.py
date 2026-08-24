@@ -44,7 +44,8 @@ def _iso_ts(value: str) -> str:
 
 
 def build_vehicles(conn: sqlite3.Connection) -> list[dict]:
-    """Build the vehicle list. One broken vehicle must never break the export."""
+    """Build the full per-vehicle detail list. One broken vehicle must never
+    break the export."""
     conn.row_factory = sqlite3.Row
     rows = conn.execute("""
         SELECT c.*, e.raw_full_text as stored_raw_full_text,
@@ -117,6 +118,41 @@ def build_vehicles(conn: sqlite3.Connection) -> list[dict]:
     return vehicles
 
 
+def _model_name(vehicle: dict) -> str:
+    """Display model name for the index (from the source model id, no inference)."""
+    model_id = (vehicle.get("source_fields") or {}).get("model")
+    return config.MODEL_NAMES.get(model_id, f"model-{model_id}")
+
+
+def _to_num(v):
+    if v is None:
+        return None
+    try:
+        f = float(v)
+        return int(f) if f == int(f) else f
+    except (ValueError, TypeError):
+        return v
+
+
+def build_index(vehicles: list[dict]) -> list[dict]:
+    """Small index: one lightweight entry per vehicle, pointing to its detail
+    file. Lets a consumer load only the listing it actually wants."""
+    index = []
+    for v in vehicles:
+        sf = v.get("source_fields") or {}
+        entry = {
+            "id": v["id"],
+            "model": _model_name(v),
+            "url": v["url"],
+            "price": _to_num(sf.get("customerprice")),
+            "km": _to_num(sf.get("kilometers")),
+            "source": v.get("source"),
+            "detail_file": f"cars/{v['id']}.json",
+        }
+        index.append(entry)
+    return index
+
+
 def build_feed(conn: sqlite3.Connection) -> dict:
     vehicles = build_vehicles(conn)
     return {
@@ -125,6 +161,42 @@ def build_feed(conn: sqlite3.Connection) -> dict:
         "vehicle_count": len(vehicles),
         "vehicles": vehicles,
     }
+
+
+def write_split_feed(conn: sqlite3.Connection) -> tuple[dict, list[dict]]:
+    """Write the split feed: cars_index.json + cars/<id>.json per vehicle.
+
+    Returns (feed_summary, index). Keeps the legacy full cars.json too for
+    backward compatibility, but the primary output is the split structure."""
+    vehicles = build_vehicles(conn)
+    index = build_index(vehicles)
+
+    # Small index file.
+    write_json({
+        "generated_at": _now_iso(),
+        "source": config.SOURCE,
+        "vehicle_count": len(vehicles),
+        "vehicles": index,
+    }, config.INDEX_FILE)
+
+    # One detail file per vehicle (full raw_full_text + source_fields + analysis).
+    config.CARS_DIR.mkdir(parents=True, exist_ok=True)
+    for v in vehicles:
+        write_json(v, config.CARS_DIR / f"{v['id']}.json")
+
+    # Legacy full dump (kept for existing consumers; not the primary feed).
+    write_json({
+        "generated_at": _now_iso(),
+        "source": config.SOURCE,
+        "vehicle_count": len(vehicles),
+        "vehicles": vehicles,
+    }, config.FEED_FILE)
+
+    return (
+        {"generated_at": _now_iso(), "source": config.SOURCE,
+         "vehicle_count": len(vehicles)},
+        index,
+    )
 
 
 def build_status(feed: dict, conn: sqlite3.Connection | None = None) -> dict:

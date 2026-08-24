@@ -78,7 +78,7 @@ def copy_file(src: Path, dst: Path) -> None:
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description="Publish cars.json/status.json to GitHub")
+    parser = argparse.ArgumentParser(description="Publish split feed (index + per-vehicle files) to GitHub")
     parser.add_argument("--no-build", action="store_true",
                         help="Skip rebuilding the feed; only push existing files")
     args = parser.parse_args()
@@ -94,50 +94,50 @@ def main() -> None:
     if not args.no_build:
         conn = sqlite3.connect(str(config.DB_PATH))
         try:
-            f = feed.build_feed(conn)
-            status_data = feed.build_status(f, conn)
+            feed_summary, index = feed.write_split_feed(conn)
+            status_data = feed.build_status(feed_summary, conn)
         finally:
             conn.close()
-        feed.write_json(f, config.FEED_FILE)
         feed.write_json(status_data, config.STATUS_FILE)
-        print(f"  Built feed: {len(f['vehicles'])} vehicles")
+        print(f"  Built split feed: {feed_summary['vehicle_count']} vehicles "
+              f"({len(index)} index entries)")
 
-    files = []
-    if config.FEED_FILE.exists():
-        files.append(config.FEED_FILE)
-    if config.STATUS_FILE.exists():
-        files.append(config.STATUS_FILE)
-    if not files:
-        print(f"  ERROR: {config.FEED_FILE} not found", file=sys.stderr)
+    if not config.INDEX_FILE.exists():
+        print(f"  ERROR: {config.INDEX_FILE} not found", file=sys.stderr)
         sys.exit(1)
 
     cache = ensure_cache(owner, repo, token)
-    for src in files:
-        copy_file(src, cache / src.name)
 
-    # Determine if anything changed. Untracked files (fresh repo, first push)
-    # are not visible to `git diff`, so check porcelain status as well.
-    has_head = run(cache, "git", "rev-parse", "--verify", "HEAD", check=False).returncode == 0
-    changed = (not has_head) or any(
-        run(cache, "git", "diff", "--quiet", "--", src.name, check=False).returncode != 0
-        for src in files
-    )
-    if not changed:
-        porcelain = run(cache, "git", "status", "--porcelain", check=False).stdout
-        changed = any(f" {src.name}" in porcelain or f"{src.name}" in porcelain for src in files)
+    # Copy index + status files.
+    for src in (config.INDEX_FILE, config.STATUS_FILE):
+        if src.exists():
+            copy_file(src, cache / src.name)
+
+    # Copy the whole per-vehicle detail directory.
+    if config.CARS_DIR.exists():
+        dest_dir = cache / "cars"
+        import shutil
+        shutil.rmtree(dest_dir, ignore_errors=True)
+        dest_dir.mkdir(parents=True, exist_ok=True)
+        for f in config.CARS_DIR.glob("*.json"):
+            copy_file(f, dest_dir / f.name)
+
+    # Determine if anything changed (index/status/cars dir).
+    changed = run(cache, "git", "status", "--porcelain", check=False).stdout.strip() != ""
     if not changed:
         print("  No changes — nothing to push.")
         sys.exit(0)
 
-    run(cache, "git", "add", *(src.name for src in files))
-    run(cache, "git", "commit", "-m", "Update feed: cars.json + status.json", check=False)
+    run(cache, "git", "add", "-A")
+    run(cache, "git", "commit", "-m", "Update feed: cars_index.json + cars/*.json + status.json", check=False)
     push = run(cache, "git", "push", "origin", "main", check=False)
     if push.returncode != 0:
         run(cache, "git", "pull", "--rebase", "origin", "main", check=False)
         push = run(cache, "git", "push", "origin", "main", check=False)
     if push.returncode == 0:
-        print(f"  Pushed feed to github.com/{owner}/{repo}")
-        print(f"  Raw URL: https://raw.githubusercontent.com/{owner}/{repo}/main/cars.json")
+        print(f"  Pushed split feed to github.com/{owner}/{repo}")
+        print(f"  Index:   https://raw.githubusercontent.com/{owner}/{repo}/main/cars_index.json")
+        print(f"  Details: https://raw.githubusercontent.com/{owner}/{repo}/main/cars/<id>.json")
     else:
         print(f"  ERROR: push failed\n{push.stderr}", file=sys.stderr)
         sys.exit(1)
