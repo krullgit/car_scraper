@@ -98,7 +98,7 @@ def run_scrape(conn: sqlite3.Connection) -> None:
 
     # Enrich new cars with detail page data (fills raw_text/raw_full_text).
     # Only cars that were never enriched (or miss raw data) are scraped.
-    _run_subprocess("enrich", ["enrich.py"], timeout=1800)
+    _run_subprocess("enrich", ["enrich.py"], timeout=10800)
 
     # Build the public cars.json feed (raw_full_text for the LLM agent)
     try:

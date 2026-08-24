@@ -32,10 +32,10 @@ PAGE_SIZE = 100
 # The downstream LLM agent judges raw_full_text itself.
 MAKE_MODELS: dict[int, list[int]] = {
     11: [1102221, 1102353],   # Audi Q4 e-tron, Q4 Sportback e-tron
-    46: [4602192],            # Škoda Enyaq (iV / 85 / Essence)
+    46: [4602192, 4602938],   # Škoda Enyaq (iV / 85 / Essence), Elroq (60 / 85)
     52: [5202184, 5202335],   # VW ID.4, VW ID.5
 }
-MAX_PRICE = 31_000  # price ceiling in EUR
+MAX_PRICE = 40_000  # price ceiling in EUR
 
 # --- Feed / URLs ----------------------------------------------------------
 

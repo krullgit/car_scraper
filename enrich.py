@@ -107,11 +107,12 @@ async def main_async(vision_only: bool = False):
     else:
         # Only cars that were never enriched or are missing raw_full_text are
         # processed — re-scraping all cars on every tracker run would be too slow.
+        # raw_text is intentionally NOT part of the trigger (it can be empty).
         rows = conn.execute("""
             SELECT c.*, e.summary as has_summary
             FROM cars c
             LEFT JOIN car_equipment e ON c.vehicleid = e.vehicleid
-            WHERE c.is_active = 1 AND (e.vehicleid IS NULL OR e.raw_text IS NULL OR e.raw_text = ''
+            WHERE c.is_active = 1 AND (e.vehicleid IS NULL
                   OR e.raw_full_text IS NULL OR e.raw_full_text = ''
                   OR e.image_analysis_json IS NULL OR e.image_analysis_json = '')
         """).fetchall()
