@@ -47,7 +47,9 @@ def _run_subprocess(name: str, args: list[str], timeout: int) -> None:
               file=sys.stderr)
 
 
-def run_scrape(conn: sqlite3.Connection) -> None:
+def run_scrape(conn: sqlite3.Connection) -> bool:
+    """Run one scrape cycle. Returns True on success, False on transient
+    (network/DNS) error so the caller can retry sooner."""
     started = time.monotonic()
     started_iso = _now_iso()
     status = "ok"
@@ -62,7 +64,7 @@ def run_scrape(conn: sqlite3.Connection) -> None:
             VALUES (?, ?, ?)
         """, (started_iso, _now_iso(), f"fetch_error: {str(e)[:200]}"))
         conn.commit()
-        return
+        return False
 
     print(f"[{started_iso}] Got {len(cars)} cars. Updating database...")
     stats = db.update_db(conn, cars)
@@ -134,6 +136,8 @@ def run_scrape(conn: sqlite3.Connection) -> None:
         for r in gone_rows:
             print(f"  GONE: {r['customerprice']:,.2f}€ | {r['shortdescription']}")
 
+    return True
+
 
 def main() -> None:
     parser = argparse.ArgumentParser(description="Track Audi Q4 e-tron, VW ID.4/ID.5 and Skoda Enyaq listings")
@@ -154,11 +158,17 @@ def main() -> None:
 
     try:
         while True:
-            run_scrape(conn)
+            ok = run_scrape(conn)
             if args.once:
                 break
-            print(f"  Sleeping {args.interval}s... (Ctrl+C to stop)")
-            time.sleep(args.interval)
+            if ok:
+                wait = args.interval
+            else:
+                # Transient network/DNS error — retry much sooner (e.g. right
+                # after boot before DNS/network is fully up).
+                wait = 60
+            print(f"  Sleeping {wait}s... (Ctrl+C to stop)")
+            time.sleep(wait)
     except KeyboardInterrupt:
         print("\nShutting down.")
     finally:
