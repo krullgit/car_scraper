@@ -14,7 +14,7 @@
     "model": 1102221,
     "shortdescription": "Q4 50 e-tron quattro basis |LED|NAVI|SONOS|",
     "registrationdate": "2023-05-08",
-    "kilometers": 25400,
+    "kilometers": 25234,
     "fuel": 5,
     "power": 220,
     "body": 9,
@@ -23,9 +23,9 @@
     "numowners": 1,
     "customerprice": "35960.00",
     "listprice": "65229.21",
-    "monthlypayment": "525.57",
+    "monthlypayment": "427.00",
     "financing": {
-      "term": 36
+      "term": 48
     },
     "leasingbusiness": {
       "monthlypayment": "0.00",
@@ -43,7 +43,7 @@
     "sellflags16": 1,
     "equipmentflags58": 0,
     "sellflags47": 0,
-    "batteryrange": 0,
+    "batteryrange": 412,
     "envkv": {
       "type": "0",
       "consumptioncombined": "0.0",
@@ -57,7 +57,7 @@
       "required": 0,
       "istaxexempt": null
     },
-    "numimages": 14,
+    "numimages": 15,
     "images": [
       {
         "xs": "https://cdn.ars-mia.de/v0/vehicles/0000089418350320024001.jpg",
@@ -156,14 +156,27 @@
         "m": "https://cdn.ars-mia.de/v0/vehicles/0000089418350800060014.jpg",
         "l": "https://cdn.ars-mia.de/v0/vehicles/0000089418351200090014.jpg",
         "xl": "https://cdn.ars-mia.de/v0/vehicles/0000089418351600120014.jpg"
+      },
+      {
+        "xs": "https://cdn.ars-mia.de/v0/vehicles/0000089418350320024015.jpg",
+        "s": "https://cdn.ars-mia.de/v0/vehicles/0000089418350480036015.jpg",
+        "m": "https://cdn.ars-mia.de/v0/vehicles/0000089418350800060015.jpg",
+        "l": "https://cdn.ars-mia.de/v0/vehicles/0000089418351200090015.jpg",
+        "xl": "https://cdn.ars-mia.de/v0/vehicles/0000089418351600120015.jpg"
       }
     ],
     "tyrelabels": [],
-    "dealerid": 23153
+    "dealerid": 23154
   },
   "image_analysis": {
     "battery_certificates": []
   },
   "first_seen": "2026-08-22T08:17:35+02:00",
-  "last_seen": "2026-08-24T20:26:10+02:00"
+  "last_seen": "2026-08-25T07:42:06+02:00",
+  "price_history": [
+    {
+      "recorded_at": "2026-08-25T07:42:06+02:00",
+      "price_eur": 35960
+    }
+  ]
 }

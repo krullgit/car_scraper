@@ -57,7 +57,7 @@
       "required": 0,
       "istaxexempt": null
     },
-    "numimages": 8,
+    "numimages": 9,
     "images": [
       {
         "xs": "https://cdn.ars-mia.de/v0/vehicles/0000078625190320024001.jpg",
@@ -114,6 +114,13 @@
         "m": "https://cdn.ars-mia.de/v0/vehicles/0000078625190800060008.jpg",
         "l": "https://cdn.ars-mia.de/v0/vehicles/0000078625191200090008.jpg",
         "xl": "https://cdn.ars-mia.de/v0/vehicles/0000078625191600120008.jpg"
+      },
+      {
+        "xs": "https://cdn.ars-mia.de/v0/vehicles/0000078625190320024009.jpg",
+        "s": "https://cdn.ars-mia.de/v0/vehicles/0000078625190480036009.jpg",
+        "m": "https://cdn.ars-mia.de/v0/vehicles/0000078625190800060009.jpg",
+        "l": "https://cdn.ars-mia.de/v0/vehicles/0000078625191200090009.jpg",
+        "xl": "https://cdn.ars-mia.de/v0/vehicles/0000078625191600120009.jpg"
       }
     ],
     "tyrelabels": [
@@ -184,5 +191,5 @@
     "battery_certificates": []
   },
   "first_seen": "2026-08-24T08:51:26+02:00",
-  "last_seen": "2026-08-24T20:26:10+02:00"
+  "last_seen": "2026-08-25T07:42:06+02:00"
 }

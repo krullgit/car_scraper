@@ -28,11 +28,11 @@
       "term": 36
     },
     "leasingbusiness": {
-      "monthlypayment": "559.66",
+      "monthlypayment": "557.98",
       "term": 36
     },
     "leasingprivate": {
-      "monthlypayment": "666.00",
+      "monthlypayment": "664.00",
       "term": 36
     },
     "emissionco2": 0,
@@ -200,5 +200,5 @@
     "battery_certificates": []
   },
   "first_seen": "2026-08-22T08:17:35+02:00",
-  "last_seen": "2026-08-24T20:26:10+02:00"
+  "last_seen": "2026-08-25T07:42:06+02:00"
 }
