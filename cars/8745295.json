@@ -20,7 +20,7 @@
     "body": 9,
     "price": "39750.00",
     "transmission": 2,
-    "numowners": 1,
+    "numowners": 2,
     "customerprice": "39750.00",
     "listprice": "59579.98",
     "monthlypayment": "379.00",
@@ -221,5 +221,5 @@
     "battery_certificates": []
   },
   "first_seen": "2026-08-22T08:17:35+02:00",
-  "last_seen": "2026-08-26T01:57:19+02:00"
+  "last_seen": "2026-08-26T02:27:28+02:00"
 }

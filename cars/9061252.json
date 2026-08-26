@@ -57,7 +57,7 @@
       "required": 0,
       "istaxexempt": null
     },
-    "numimages": 8,
+    "numimages": 27,
     "images": [
       {
         "xs": "https://cdn.ars-mia.de/v0/vehicles/0000090612520320024001.jpg",
@@ -114,6 +114,139 @@
         "m": "https://cdn.ars-mia.de/v0/vehicles/0000090612520800060008.jpg",
         "l": "https://cdn.ars-mia.de/v0/vehicles/0000090612521200090008.jpg",
         "xl": "https://cdn.ars-mia.de/v0/vehicles/0000090612521600120008.jpg"
+      },
+      {
+        "xs": "https://cdn.ars-mia.de/v0/vehicles/0000090612520320024009.jpg",
+        "s": "https://cdn.ars-mia.de/v0/vehicles/0000090612520480036009.jpg",
+        "m": "https://cdn.ars-mia.de/v0/vehicles/0000090612520800060009.jpg",
+        "l": "https://cdn.ars-mia.de/v0/vehicles/0000090612521200090009.jpg",
+        "xl": "https://cdn.ars-mia.de/v0/vehicles/0000090612521600120009.jpg"
+      },
+      {
+        "xs": "https://cdn.ars-mia.de/v0/vehicles/0000090612520320024010.jpg",
+        "s": "https://cdn.ars-mia.de/v0/vehicles/0000090612520480036010.jpg",
+        "m": "https://cdn.ars-mia.de/v0/vehicles/0000090612520800060010.jpg",
+        "l": "https://cdn.ars-mia.de/v0/vehicles/0000090612521200090010.jpg",
+        "xl": "https://cdn.ars-mia.de/v0/vehicles/0000090612521600120010.jpg"
+      },
+      {
+        "xs": "https://cdn.ars-mia.de/v0/vehicles/0000090612520320024011.jpg",
+        "s": "https://cdn.ars-mia.de/v0/vehicles/0000090612520480036011.jpg",
+        "m": "https://cdn.ars-mia.de/v0/vehicles/0000090612520800060011.jpg",
+        "l": "https://cdn.ars-mia.de/v0/vehicles/0000090612521200090011.jpg",
+        "xl": "https://cdn.ars-mia.de/v0/vehicles/0000090612521600120011.jpg"
+      },
+      {
+        "xs": "https://cdn.ars-mia.de/v0/vehicles/0000090612520320024012.jpg",
+        "s": "https://cdn.ars-mia.de/v0/vehicles/0000090612520480036012.jpg",
+        "m": "https://cdn.ars-mia.de/v0/vehicles/0000090612520800060012.jpg",
+        "l": "https://cdn.ars-mia.de/v0/vehicles/0000090612521200090012.jpg",
+        "xl": "https://cdn.ars-mia.de/v0/vehicles/0000090612521600120012.jpg"
+      },
+      {
+        "xs": "https://cdn.ars-mia.de/v0/vehicles/0000090612520320024013.jpg",
+        "s": "https://cdn.ars-mia.de/v0/vehicles/0000090612520480036013.jpg",
+        "m": "https://cdn.ars-mia.de/v0/vehicles/0000090612520800060013.jpg",
+        "l": "https://cdn.ars-mia.de/v0/vehicles/0000090612521200090013.jpg",
+        "xl": "https://cdn.ars-mia.de/v0/vehicles/0000090612521600120013.jpg"
+      },
+      {
+        "xs": "https://cdn.ars-mia.de/v0/vehicles/0000090612520320024014.jpg",
+        "s": "https://cdn.ars-mia.de/v0/vehicles/0000090612520480036014.jpg",
+        "m": "https://cdn.ars-mia.de/v0/vehicles/0000090612520800060014.jpg",
+        "l": "https://cdn.ars-mia.de/v0/vehicles/0000090612521200090014.jpg",
+        "xl": "https://cdn.ars-mia.de/v0/vehicles/0000090612521600120014.jpg"
+      },
+      {
+        "xs": "https://cdn.ars-mia.de/v0/vehicles/0000090612520320024015.jpg",
+        "s": "https://cdn.ars-mia.de/v0/vehicles/0000090612520480036015.jpg",
+        "m": "https://cdn.ars-mia.de/v0/vehicles/0000090612520800060015.jpg",
+        "l": "https://cdn.ars-mia.de/v0/vehicles/0000090612521200090015.jpg",
+        "xl": "https://cdn.ars-mia.de/v0/vehicles/0000090612521600120015.jpg"
+      },
+      {
+        "xs": "https://cdn.ars-mia.de/v0/vehicles/0000090612520320024016.jpg",
+        "s": "https://cdn.ars-mia.de/v0/vehicles/0000090612520480036016.jpg",
+        "m": "https://cdn.ars-mia.de/v0/vehicles/0000090612520800060016.jpg",
+        "l": "https://cdn.ars-mia.de/v0/vehicles/0000090612521200090016.jpg",
+        "xl": "https://cdn.ars-mia.de/v0/vehicles/0000090612521600120016.jpg"
+      },
+      {
+        "xs": "https://cdn.ars-mia.de/v0/vehicles/0000090612520320024017.jpg",
+        "s": "https://cdn.ars-mia.de/v0/vehicles/0000090612520480036017.jpg",
+        "m": "https://cdn.ars-mia.de/v0/vehicles/0000090612520800060017.jpg",
+        "l": "https://cdn.ars-mia.de/v0/vehicles/0000090612521200090017.jpg",
+        "xl": "https://cdn.ars-mia.de/v0/vehicles/0000090612521600120017.jpg"
+      },
+      {
+        "xs": "https://cdn.ars-mia.de/v0/vehicles/0000090612520320024018.jpg",
+        "s": "https://cdn.ars-mia.de/v0/vehicles/0000090612520480036018.jpg",
+        "m": "https://cdn.ars-mia.de/v0/vehicles/0000090612520800060018.jpg",
+        "l": "https://cdn.ars-mia.de/v0/vehicles/0000090612521200090018.jpg",
+        "xl": "https://cdn.ars-mia.de/v0/vehicles/0000090612521600120018.jpg"
+      },
+      {
+        "xs": "https://cdn.ars-mia.de/v0/vehicles/0000090612520320024019.jpg",
+        "s": "https://cdn.ars-mia.de/v0/vehicles/0000090612520480036019.jpg",
+        "m": "https://cdn.ars-mia.de/v0/vehicles/0000090612520800060019.jpg",
+        "l": "https://cdn.ars-mia.de/v0/vehicles/0000090612521200090019.jpg",
+        "xl": "https://cdn.ars-mia.de/v0/vehicles/0000090612521600120019.jpg"
+      },
+      {
+        "xs": "https://cdn.ars-mia.de/v0/vehicles/0000090612520320024020.jpg",
+        "s": "https://cdn.ars-mia.de/v0/vehicles/0000090612520480036020.jpg",
+        "m": "https://cdn.ars-mia.de/v0/vehicles/0000090612520800060020.jpg",
+        "l": "https://cdn.ars-mia.de/v0/vehicles/0000090612521200090020.jpg",
+        "xl": "https://cdn.ars-mia.de/v0/vehicles/0000090612521600120020.jpg"
+      },
+      {
+        "xs": "https://cdn.ars-mia.de/v0/vehicles/0000090612520320024021.jpg",
+        "s": "https://cdn.ars-mia.de/v0/vehicles/0000090612520480036021.jpg",
+        "m": "https://cdn.ars-mia.de/v0/vehicles/0000090612520800060021.jpg",
+        "l": "https://cdn.ars-mia.de/v0/vehicles/0000090612521200090021.jpg",
+        "xl": "https://cdn.ars-mia.de/v0/vehicles/0000090612521600120021.jpg"
+      },
+      {
+        "xs": "https://cdn.ars-mia.de/v0/vehicles/0000090612520320024022.jpg",
+        "s": "https://cdn.ars-mia.de/v0/vehicles/0000090612520480036022.jpg",
+        "m": "https://cdn.ars-mia.de/v0/vehicles/0000090612520800060022.jpg",
+        "l": "https://cdn.ars-mia.de/v0/vehicles/0000090612521200090022.jpg",
+        "xl": "https://cdn.ars-mia.de/v0/vehicles/0000090612521600120022.jpg"
+      },
+      {
+        "xs": "https://cdn.ars-mia.de/v0/vehicles/0000090612520320024023.jpg",
+        "s": "https://cdn.ars-mia.de/v0/vehicles/0000090612520480036023.jpg",
+        "m": "https://cdn.ars-mia.de/v0/vehicles/0000090612520800060023.jpg",
+        "l": "https://cdn.ars-mia.de/v0/vehicles/0000090612521200090023.jpg",
+        "xl": "https://cdn.ars-mia.de/v0/vehicles/0000090612521600120023.jpg"
+      },
+      {
+        "xs": "https://cdn.ars-mia.de/v0/vehicles/0000090612520320024024.jpg",
+        "s": "https://cdn.ars-mia.de/v0/vehicles/0000090612520480036024.jpg",
+        "m": "https://cdn.ars-mia.de/v0/vehicles/0000090612520800060024.jpg",
+        "l": "https://cdn.ars-mia.de/v0/vehicles/0000090612521200090024.jpg",
+        "xl": "https://cdn.ars-mia.de/v0/vehicles/0000090612521600120024.jpg"
+      },
+      {
+        "xs": "https://cdn.ars-mia.de/v0/vehicles/0000090612520320024025.jpg",
+        "s": "https://cdn.ars-mia.de/v0/vehicles/0000090612520480036025.jpg",
+        "m": "https://cdn.ars-mia.de/v0/vehicles/0000090612520800060025.jpg",
+        "l": "https://cdn.ars-mia.de/v0/vehicles/0000090612521200090025.jpg",
+        "xl": "https://cdn.ars-mia.de/v0/vehicles/0000090612521600120025.jpg"
+      },
+      {
+        "xs": "https://cdn.ars-mia.de/v0/vehicles/0000090612520320024026.jpg",
+        "s": "https://cdn.ars-mia.de/v0/vehicles/0000090612520480036026.jpg",
+        "m": "https://cdn.ars-mia.de/v0/vehicles/0000090612520800060026.jpg",
+        "l": "https://cdn.ars-mia.de/v0/vehicles/0000090612521200090026.jpg",
+        "xl": "https://cdn.ars-mia.de/v0/vehicles/0000090612521600120026.jpg"
+      },
+      {
+        "xs": "https://cdn.ars-mia.de/v0/vehicles/0000090612520320024027.jpg",
+        "s": "https://cdn.ars-mia.de/v0/vehicles/0000090612520480036027.jpg",
+        "m": "https://cdn.ars-mia.de/v0/vehicles/0000090612520800060027.jpg",
+        "l": "https://cdn.ars-mia.de/v0/vehicles/0000090612521200090027.jpg",
+        "xl": "https://cdn.ars-mia.de/v0/vehicles/0000090612521600120027.jpg"
       }
     ],
     "tyrelabels": [],
@@ -123,5 +256,5 @@
     "battery_certificates": []
   },
   "first_seen": "2026-08-22T08:17:35+02:00",
-  "last_seen": "2026-08-26T01:57:19+02:00"
+  "last_seen": "2026-08-26T02:27:28+02:00"
 }
