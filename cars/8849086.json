@@ -12,7 +12,7 @@
     "offertypecode": 2,
     "make": 46,
     "model": 4602192,
-    "shortdescription": "Enyaq 80 AHZV Navi LED Standhzg.",
+    "shortdescription": "Enyaq 80x AHZV Navi LED Standhzg.",
     "registrationdate": "2023-02-24",
     "kilometers": 64411,
     "fuel": 5,
@@ -200,7 +200,7 @@
     "battery_certificates": []
   },
   "first_seen": "2026-08-22T08:17:35+02:00",
-  "last_seen": "2026-08-27T02:07:26+02:00",
+  "last_seen": "2026-08-27T02:37:35+02:00",
   "price_history": [
     {
       "recorded_at": "2026-08-26T02:27:28+02:00",

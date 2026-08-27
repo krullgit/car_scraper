@@ -14,7 +14,7 @@
     "model": 5202335,
     "shortdescription": "ID.5 GTX 4 Mot 220 kW IQ.Light Pano ParkAssist+ RearView App WärmePu CCS",
     "registrationdate": "2023-06-22",
-    "kilometers": 69666,
+    "kilometers": 69667,
     "fuel": 5,
     "power": 220,
     "body": 9,
@@ -43,7 +43,7 @@
     "sellflags16": 1,
     "equipmentflags58": 1,
     "sellflags47": 0,
-    "batteryrange": 508,
+    "batteryrange": 491,
     "envkv": {
       "type": "0",
       "consumptioncombined": "0.0",
@@ -57,7 +57,7 @@
       "required": 0,
       "istaxexempt": null
     },
-    "numimages": 8,
+    "numimages": 9,
     "images": [
       {
         "xs": "https://cdn.ars-mia.de/v0/vehicles/0000090612560320024001.jpg",
@@ -114,6 +114,13 @@
         "m": "https://cdn.ars-mia.de/v0/vehicles/0000090612560800060008.jpg",
         "l": "https://cdn.ars-mia.de/v0/vehicles/0000090612561200090008.jpg",
         "xl": "https://cdn.ars-mia.de/v0/vehicles/0000090612561600120008.jpg"
+      },
+      {
+        "xs": "https://cdn.ars-mia.de/v0/vehicles/0000090612560320024009.jpg",
+        "s": "https://cdn.ars-mia.de/v0/vehicles/0000090612560480036009.jpg",
+        "m": "https://cdn.ars-mia.de/v0/vehicles/0000090612560800060009.jpg",
+        "l": "https://cdn.ars-mia.de/v0/vehicles/0000090612561200090009.jpg",
+        "xl": "https://cdn.ars-mia.de/v0/vehicles/0000090612561600120009.jpg"
       }
     ],
     "tyrelabels": [],
@@ -123,5 +130,5 @@
     "battery_certificates": []
   },
   "first_seen": "2026-08-22T08:17:35+02:00",
-  "last_seen": "2026-08-27T02:07:26+02:00"
+  "last_seen": "2026-08-27T02:37:35+02:00"
 }
