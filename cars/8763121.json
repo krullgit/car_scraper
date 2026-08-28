@@ -43,7 +43,7 @@
     "sellflags16": 1,
     "equipmentflags58": 1,
     "sellflags47": 0,
-    "batteryrange": 0,
+    "batteryrange": 491,
     "envkv": {
       "type": "0",
       "consumptioncombined": "0.0",
@@ -165,5 +165,5 @@
     "battery_certificates": []
   },
   "first_seen": "2026-08-22T08:17:35+02:00",
-  "last_seen": "2026-08-28T01:48:16+02:00"
+  "last_seen": "2026-08-28T02:18:25+02:00"
 }
