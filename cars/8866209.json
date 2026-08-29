@@ -18,10 +18,10 @@
     "fuel": 5,
     "power": 125,
     "body": 9,
-    "price": "30682.00",
+    "price": "29993.00",
     "transmission": 2,
     "numowners": 1,
-    "customerprice": "30682.00",
+    "customerprice": "29993.00",
     "listprice": "48615.02",
     "monthlypayment": "359.00",
     "financing": {
@@ -280,5 +280,11 @@
     ]
   },
   "first_seen": "2026-08-22T08:17:35+02:00",
-  "last_seen": "2026-08-29T01:59:28+02:00"
+  "last_seen": "2026-08-29T02:29:37+02:00",
+  "price_history": [
+    {
+      "recorded_at": "2026-08-29T02:29:37+02:00",
+      "price_eur": 30682
+    }
+  ]
 }

@@ -18,12 +18,12 @@
     "fuel": 5,
     "power": 125,
     "body": 9,
-    "price": "26410.00",
+    "price": "25820.00",
     "transmission": 2,
     "numowners": 1,
-    "customerprice": "26410.00",
+    "customerprice": "25820.00",
     "listprice": "46005.00",
-    "monthlypayment": "396.47",
+    "monthlypayment": "378.10",
     "financing": {
       "term": 36
     },
@@ -32,7 +32,7 @@
       "term": null
     },
     "leasingprivate": {
-      "monthlypayment": "417.00",
+      "monthlypayment": "399.00",
       "term": 36
     },
     "emissionco2": 0,
@@ -236,8 +236,12 @@
     ]
   },
   "first_seen": "2026-08-22T08:17:35+02:00",
-  "last_seen": "2026-08-29T01:59:27+02:00",
+  "last_seen": "2026-08-29T02:29:37+02:00",
   "price_history": [
+    {
+      "recorded_at": "2026-08-29T02:29:37+02:00",
+      "price_eur": 26410
+    },
     {
       "recorded_at": "2026-08-25T07:42:06+02:00",
       "price_eur": 26410

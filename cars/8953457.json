@@ -18,12 +18,12 @@
     "fuel": 5,
     "power": 220,
     "body": 9,
-    "price": "33595.00",
+    "price": "33389.00",
     "transmission": 2,
     "numowners": 1,
-    "customerprice": "33595.00",
+    "customerprice": "33389.00",
     "listprice": "56224.58",
-    "monthlypayment": "449.00",
+    "monthlypayment": "439.00",
     "financing": {
       "term": 36
     },
@@ -32,7 +32,7 @@
       "term": null
     },
     "leasingprivate": {
-      "monthlypayment": "505.00",
+      "monthlypayment": "500.00",
       "term": 48
     },
     "emissionco2": 0,
@@ -256,5 +256,11 @@
     "battery_certificates": []
   },
   "first_seen": "2026-08-22T08:17:35+02:00",
-  "last_seen": "2026-08-29T01:59:28+02:00"
+  "last_seen": "2026-08-29T02:29:37+02:00",
+  "price_history": [
+    {
+      "recorded_at": "2026-08-29T02:29:37+02:00",
+      "price_eur": 33595
+    }
+  ]
 }
