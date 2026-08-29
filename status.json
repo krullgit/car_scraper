@@ -1,8 +1,8 @@
 {
   "status": "ok",
-  "generated_at": "2026-08-29T13:33:39+02:00",
-  "last_attempt_at": "2026-08-29T11:33:39+00:00",
+  "generated_at": "2026-08-29T14:03:49+02:00",
+  "last_attempt_at": "2026-08-29T12:03:49+00:00",
   "vehicle_count": 238,
-  "last_successful_scrape": "2026-08-29T11:33:39+00:00",
+  "last_successful_scrape": "2026-08-29T12:03:49+00:00",
   "age_minutes": 0
 }
