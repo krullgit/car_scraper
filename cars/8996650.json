@@ -32,7 +32,7 @@
       "term": null
     },
     "leasingprivate": {
-      "monthlypayment": "354.00",
+      "monthlypayment": "352.00",
       "term": 36
     },
     "emissionco2": 0,
@@ -165,5 +165,5 @@
     "battery_certificates": []
   },
   "first_seen": "2026-08-22T08:17:35+02:00",
-  "last_seen": "2026-08-30T02:08:34+02:00"
+  "last_seen": "2026-08-30T02:38:43+02:00"
 }
