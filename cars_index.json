@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-31T03:47:12+02:00",
+  "generated_at": "2026-08-31T04:17:21+02:00",
   "source": "volkswagen-automobile-berlin",
   "vehicle_count": 232,
   "vehicles": [
@@ -1552,6 +1552,15 @@
       "detail_file": "cars/9094688.json"
     },
     {
+      "id": "8372962",
+      "model": "Audi Q4 Sportback e-tron",
+      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8372962",
+      "price": 35750,
+      "km": 48001,
+      "source": "volkswagen-automobile-berlin",
+      "detail_file": "cars/8372962.json"
+    },
+    {
       "id": "8854833",
       "model": "Skoda Enyaq",
       "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8854833",
@@ -1748,15 +1757,6 @@
       "km": 38739,
       "source": "volkswagen-automobile-berlin",
       "detail_file": "cars/8910606.json"
-    },
-    {
-      "id": "8372962",
-      "model": "Audi Q4 Sportback e-tron",
-      "url": "https://www.volkswagen-automobile-berlin.de/gebrauchtwagen/fahrzeugsuche/8372962",
-      "price": 37250,
-      "km": 43001,
-      "source": "volkswagen-automobile-berlin",
-      "detail_file": "cars/8372962.json"
     },
     {
       "id": "8982757",

@@ -57,7 +57,7 @@
       "required": 0,
       "istaxexempt": null
     },
-    "numimages": 16,
+    "numimages": 15,
     "images": [
       {
         "xs": "https://cdn.ars-mia.de/v0/vehicles/0000090403580320024001.jpg",
@@ -163,13 +163,6 @@
         "m": "https://cdn.ars-mia.de/v0/vehicles/0000090403580800060015.jpg",
         "l": "https://cdn.ars-mia.de/v0/vehicles/0000090403581200090015.jpg",
         "xl": "https://cdn.ars-mia.de/v0/vehicles/0000090403581600120015.jpg"
-      },
-      {
-        "xs": "https://cdn.ars-mia.de/v0/vehicles/0000090403580320024016.jpg",
-        "s": "https://cdn.ars-mia.de/v0/vehicles/0000090403580480036016.jpg",
-        "m": "https://cdn.ars-mia.de/v0/vehicles/0000090403580800060016.jpg",
-        "l": "https://cdn.ars-mia.de/v0/vehicles/0000090403581200090016.jpg",
-        "xl": "https://cdn.ars-mia.de/v0/vehicles/0000090403581600120016.jpg"
       }
     ],
     "tyrelabels": [],
@@ -179,7 +172,7 @@
     "battery_certificates": []
   },
   "first_seen": "2026-08-22T08:17:35+02:00",
-  "last_seen": "2026-08-31T01:47:11+02:00",
+  "last_seen": "2026-08-31T02:17:21+02:00",
   "price_history": [
     {
       "recorded_at": "2026-08-25T07:42:06+02:00",
