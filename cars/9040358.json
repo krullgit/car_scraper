@@ -12,7 +12,7 @@
     "offertypecode": 2,
     "make": 11,
     "model": 1102221,
-    "shortdescription": "Q4 e-tron 40 150 kW",
+    "shortdescription": "Q4 e-tron 40 S line ACC/Virtual/LED",
     "registrationdate": "2023-08-02",
     "kilometers": 38037,
     "fuel": 5,
@@ -172,7 +172,7 @@
     "battery_certificates": []
   },
   "first_seen": "2026-08-22T08:17:35+02:00",
-  "last_seen": "2026-09-01T01:56:15+02:00",
+  "last_seen": "2026-09-01T02:26:25+02:00",
   "price_history": [
     {
       "recorded_at": "2026-08-25T07:42:06+02:00",
