@@ -14,7 +14,7 @@
     "model": 1102221,
     "shortdescription": "Q4 40 e-tron LED NAV+ PANO SFW KAM SHZ 19\" DAB",
     "registrationdate": "2023-06-30",
-    "kilometers": 58644,
+    "kilometers": 58650,
     "fuel": 5,
     "power": 150,
     "body": 9,
@@ -43,7 +43,7 @@
     "sellflags16": 1,
     "equipmentflags58": 0,
     "sellflags47": 0,
-    "batteryrange": 0,
+    "batteryrange": 412,
     "envkv": {
       "type": "0",
       "consumptioncombined": "0.0",
@@ -165,5 +165,5 @@
     "battery_certificates": []
   },
   "first_seen": "2026-08-22T08:17:35+02:00",
-  "last_seen": "2026-09-02T02:06:34+02:00"
+  "last_seen": "2026-09-02T02:36:48+02:00"
 }

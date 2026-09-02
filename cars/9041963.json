@@ -32,8 +32,8 @@
       "term": null
     },
     "leasingprivate": {
-      "monthlypayment": "0.00",
-      "term": null
+      "monthlypayment": "549.00",
+      "term": 48
     },
     "emissionco2": 0,
     "emissionsbadge": 4,
@@ -57,7 +57,7 @@
       "required": 0,
       "istaxexempt": null
     },
-    "numimages": 50,
+    "numimages": 51,
     "images": [
       {
         "xs": "https://cdn.ars-mia.de/v0/vehicles/0000090419630320024001.jpg",
@@ -408,6 +408,13 @@
         "m": "https://cdn.ars-mia.de/v0/vehicles/0000090419630800060050.jpg",
         "l": "https://cdn.ars-mia.de/v0/vehicles/0000090419631200090050.jpg",
         "xl": "https://cdn.ars-mia.de/v0/vehicles/0000090419631600120050.jpg"
+      },
+      {
+        "xs": "https://cdn.ars-mia.de/v0/vehicles/0000090419630320024051.jpg",
+        "s": "https://cdn.ars-mia.de/v0/vehicles/0000090419630480036051.jpg",
+        "m": "https://cdn.ars-mia.de/v0/vehicles/0000090419630800060051.jpg",
+        "l": "https://cdn.ars-mia.de/v0/vehicles/0000090419631200090051.jpg",
+        "xl": "https://cdn.ars-mia.de/v0/vehicles/0000090419631600120051.jpg"
       }
     ],
     "tyrelabels": [],
@@ -417,5 +424,5 @@
     "battery_certificates": []
   },
   "first_seen": "2026-08-22T08:17:35+02:00",
-  "last_seen": "2026-09-02T02:06:34+02:00"
+  "last_seen": "2026-09-02T02:36:48+02:00"
 }

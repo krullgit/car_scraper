@@ -18,12 +18,12 @@
     "fuel": 5,
     "power": 150,
     "body": 9,
-    "price": "28440.00",
+    "price": "27820.00",
     "transmission": 2,
     "numowners": 1,
-    "customerprice": "28440.00",
+    "customerprice": "27820.00",
     "listprice": "59880.00",
-    "monthlypayment": "390.90",
+    "monthlypayment": "371.59",
     "financing": {
       "term": 36
     },
@@ -264,8 +264,12 @@
     ]
   },
   "first_seen": "2026-08-22T08:17:35+02:00",
-  "last_seen": "2026-09-02T02:06:34+02:00",
+  "last_seen": "2026-09-02T02:36:48+02:00",
   "price_history": [
+    {
+      "recorded_at": "2026-09-02T02:36:48+02:00",
+      "price_eur": 28440
+    },
     {
       "recorded_at": "2026-08-27T02:37:35+02:00",
       "price_eur": 28440

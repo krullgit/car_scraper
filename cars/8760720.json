@@ -18,10 +18,10 @@
     "fuel": 5,
     "power": 210,
     "body": 9,
-    "price": "38248.00",
+    "price": "37888.00",
     "transmission": 2,
     "numowners": 1,
-    "customerprice": "38248.00",
+    "customerprice": "37888.00",
     "listprice": "63585.01",
     "monthlypayment": "199.00",
     "financing": {
@@ -32,7 +32,7 @@
       "term": null
     },
     "leasingprivate": {
-      "monthlypayment": "334.00",
+      "monthlypayment": "324.00",
       "term": 36
     },
     "emissionco2": 0,
@@ -57,7 +57,7 @@
       "required": 0,
       "istaxexempt": null
     },
-    "numimages": 25,
+    "numimages": 26,
     "images": [
       {
         "xs": "https://cdn.ars-mia.de/v0/vehicles/0000087607200320024001.jpg",
@@ -233,6 +233,13 @@
         "m": "https://cdn.ars-mia.de/v0/vehicles/0000087607200800060025.jpg",
         "l": "https://cdn.ars-mia.de/v0/vehicles/0000087607201200090025.jpg",
         "xl": "https://cdn.ars-mia.de/v0/vehicles/0000087607201600120025.jpg"
+      },
+      {
+        "xs": "https://cdn.ars-mia.de/v0/vehicles/0000087607200320024026.jpg",
+        "s": "https://cdn.ars-mia.de/v0/vehicles/0000087607200480036026.jpg",
+        "m": "https://cdn.ars-mia.de/v0/vehicles/0000087607200800060026.jpg",
+        "l": "https://cdn.ars-mia.de/v0/vehicles/0000087607201200090026.jpg",
+        "xl": "https://cdn.ars-mia.de/v0/vehicles/0000087607201600120026.jpg"
       }
     ],
     "tyrelabels": [],
@@ -242,5 +249,11 @@
     "battery_certificates": []
   },
   "first_seen": "2026-08-22T08:17:35+02:00",
-  "last_seen": "2026-09-02T02:06:34+02:00"
+  "last_seen": "2026-09-02T02:36:48+02:00",
+  "price_history": [
+    {
+      "recorded_at": "2026-09-02T02:36:48+02:00",
+      "price_eur": 38248
+    }
+  ]
 }

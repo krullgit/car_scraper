@@ -23,9 +23,9 @@
     "numowners": 1,
     "customerprice": "31781.00",
     "listprice": "58070.00",
-    "monthlypayment": "409.00",
+    "monthlypayment": "289.00",
     "financing": {
-      "term": 36
+      "term": 48
     },
     "leasingbusiness": {
       "monthlypayment": "0.00",
@@ -235,8 +235,12 @@
     "battery_certificates": []
   },
   "first_seen": "2026-08-22T08:17:35+02:00",
-  "last_seen": "2026-09-02T02:06:34+02:00",
+  "last_seen": "2026-09-02T02:36:48+02:00",
   "price_history": [
+    {
+      "recorded_at": "2026-09-02T02:36:48+02:00",
+      "price_eur": 31781
+    },
     {
       "recorded_at": "2026-09-01T02:26:25+02:00",
       "price_eur": 31980
