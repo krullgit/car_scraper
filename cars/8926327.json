@@ -12,7 +12,7 @@
     "offertypecode": 1,
     "make": 52,
     "model": 5202184,
-    "shortdescription": "ID.4 Pro 82 kW Performance Navi Wärmepumpe Dynamic Light Assist",
+    "shortdescription": "ID.4 Pro 150/77 Wärmepumpe  Navi PDC SHZ",
     "registrationdate": "2024-04-30",
     "kilometers": 28162,
     "fuel": 5,
@@ -214,7 +214,7 @@
     "battery_certificates": []
   },
   "first_seen": "2026-08-22T08:17:35+02:00",
-  "last_seen": "2026-09-03T01:49:47+02:00",
+  "last_seen": "2026-09-03T02:19:58+02:00",
   "price_history": [
     {
       "recorded_at": "2026-08-27T02:37:35+02:00",
