@@ -18,12 +18,12 @@
     "fuel": 5,
     "power": 220,
     "body": 9,
-    "price": "31430.00",
+    "price": "32330.00",
     "transmission": 2,
     "numowners": 1,
-    "customerprice": "31430.00",
+    "customerprice": "32330.00",
     "listprice": "60968.31",
-    "monthlypayment": "369.00",
+    "monthlypayment": "379.58",
     "financing": {
       "term": 48
     },
@@ -32,7 +32,7 @@
       "term": null
     },
     "leasingprivate": {
-      "monthlypayment": "448.00",
+      "monthlypayment": "477.00",
       "term": 36
     },
     "emissionco2": 0,
@@ -43,7 +43,7 @@
     "sellflags16": 1,
     "equipmentflags58": 1,
     "sellflags47": 0,
-    "batteryrange": 0,
+    "batteryrange": 510,
     "envkv": {
       "type": "0",
       "consumptioncombined": "0.0",
@@ -57,7 +57,7 @@
       "required": 0,
       "istaxexempt": null
     },
-    "numimages": 18,
+    "numimages": 20,
     "images": [
       {
         "xs": "https://cdn.ars-mia.de/v0/vehicles/0000089187240320024001.jpg",
@@ -184,6 +184,20 @@
         "m": "https://cdn.ars-mia.de/v0/vehicles/0000089187240800060018.jpg",
         "l": "https://cdn.ars-mia.de/v0/vehicles/0000089187241200090018.jpg",
         "xl": "https://cdn.ars-mia.de/v0/vehicles/0000089187241600120018.jpg"
+      },
+      {
+        "xs": "https://cdn.ars-mia.de/v0/vehicles/0000089187240320024019.jpg",
+        "s": "https://cdn.ars-mia.de/v0/vehicles/0000089187240480036019.jpg",
+        "m": "https://cdn.ars-mia.de/v0/vehicles/0000089187240800060019.jpg",
+        "l": "https://cdn.ars-mia.de/v0/vehicles/0000089187241200090019.jpg",
+        "xl": "https://cdn.ars-mia.de/v0/vehicles/0000089187241600120019.jpg"
+      },
+      {
+        "xs": "https://cdn.ars-mia.de/v0/vehicles/0000089187240320024020.jpg",
+        "s": "https://cdn.ars-mia.de/v0/vehicles/0000089187240480036020.jpg",
+        "m": "https://cdn.ars-mia.de/v0/vehicles/0000089187240800060020.jpg",
+        "l": "https://cdn.ars-mia.de/v0/vehicles/0000089187241200090020.jpg",
+        "xl": "https://cdn.ars-mia.de/v0/vehicles/0000089187241600120020.jpg"
       }
     ],
     "tyrelabels": [],
@@ -193,8 +207,12 @@
     "battery_certificates": []
   },
   "first_seen": "2026-08-22T08:17:35+01:00",
-  "last_seen": "2026-11-06T20:47:48+01:00",
+  "last_seen": "2026-11-20T20:37:50+01:00",
   "price_history": [
+    {
+      "recorded_at": "2026-11-20T20:37:50+01:00",
+      "price_eur": 31430
+    },
     {
       "recorded_at": "2026-11-06T14:18:42+01:00",
       "price_eur": 33430

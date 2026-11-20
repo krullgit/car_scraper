@@ -18,12 +18,12 @@
     "fuel": 5,
     "power": 150,
     "body": 9,
-    "price": "31960.00",
+    "price": "29990.00",
     "transmission": 2,
     "numowners": 1,
-    "customerprice": "31960.00",
+    "customerprice": "29990.00",
     "listprice": "54789.99",
-    "monthlypayment": "529.00",
+    "monthlypayment": "499.00",
     "financing": {
       "term": 36
     },
@@ -32,8 +32,8 @@
       "term": null
     },
     "leasingprivate": {
-      "monthlypayment": "0.00",
-      "term": null
+      "monthlypayment": "536.00",
+      "term": 48
     },
     "emissionco2": 0,
     "emissionsbadge": 4,
@@ -57,7 +57,7 @@
       "required": 0,
       "istaxexempt": null
     },
-    "numimages": 12,
+    "numimages": 14,
     "images": [
       {
         "xs": "https://cdn.ars-mia.de/v0/vehicles/0000090357570320024001.jpg",
@@ -142,6 +142,20 @@
         "m": "https://cdn.ars-mia.de/v0/vehicles/0000090357570800060012.jpg",
         "l": "https://cdn.ars-mia.de/v0/vehicles/0000090357571200090012.jpg",
         "xl": "https://cdn.ars-mia.de/v0/vehicles/0000090357571600120012.jpg"
+      },
+      {
+        "xs": "https://cdn.ars-mia.de/v0/vehicles/0000090357570320024013.jpg",
+        "s": "https://cdn.ars-mia.de/v0/vehicles/0000090357570480036013.jpg",
+        "m": "https://cdn.ars-mia.de/v0/vehicles/0000090357570800060013.jpg",
+        "l": "https://cdn.ars-mia.de/v0/vehicles/0000090357571200090013.jpg",
+        "xl": "https://cdn.ars-mia.de/v0/vehicles/0000090357571600120013.jpg"
+      },
+      {
+        "xs": "https://cdn.ars-mia.de/v0/vehicles/0000090357570320024014.jpg",
+        "s": "https://cdn.ars-mia.de/v0/vehicles/0000090357570480036014.jpg",
+        "m": "https://cdn.ars-mia.de/v0/vehicles/0000090357570800060014.jpg",
+        "l": "https://cdn.ars-mia.de/v0/vehicles/0000090357571200090014.jpg",
+        "xl": "https://cdn.ars-mia.de/v0/vehicles/0000090357571600120014.jpg"
       }
     ],
     "tyrelabels": [],
@@ -151,8 +165,12 @@
     "battery_certificates": []
   },
   "first_seen": "2026-08-22T08:17:35+01:00",
-  "last_seen": "2026-11-06T20:47:48+01:00",
+  "last_seen": "2026-11-20T20:37:50+01:00",
   "price_history": [
+    {
+      "recorded_at": "2026-11-20T20:37:50+01:00",
+      "price_eur": 31960
+    },
     {
       "recorded_at": "2026-11-06T14:18:42+01:00",
       "price_eur": 32730
